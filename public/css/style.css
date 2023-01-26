@@ -1,0 +1,23 @@
+body {
+    background-color: blue;
+}
+
+
+.formulaire {
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+form {
+    background-color: darkcyan;
+    width: 1000px;
+    height: 500px;
+    align-items: center;
+}
+
+
+img {
+    width: 300px;
+    height: 300px;
+}
