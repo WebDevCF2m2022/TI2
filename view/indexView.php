@@ -22,13 +22,15 @@
         <!-- mettre en type="button" hein -->
         <button type="submit">envoyer</button>
     </form>
-    <?php if (isset($messageRetour)) : ?>
+    <?php
+    if (isset($messageRetour)) : ?>
         <?= $messageRetour ?>
     <?php
     endif;
     ?>
+    <!-- a enlever -->
     <hr>
-    <div style="padding: 10rem;"></div>
+    <div style="padding: 5rem;"></div>
 
 
 
@@ -40,18 +42,23 @@
 
         if (empty($nbLO)) : ?>
             <?= "il y a pas de messages ici"; ?>
-        <?php else : ?>
-            <?= "il y a " . $nbLO . " adresses"; ?>
+            <?php else :
+            if ($nbLO == 1) : ?>
+
+                <p><?= "il y a " . $nbLO . " adresse"; ?></p>
+            <?php else : ?>
+                <p><?= "il y a " . $nbLO . " adresses"; ?></p>
+            <?php endif; ?>
+            <?php foreach ($resultLO as $item) : ?>
+                <p><?= $item['firstname']; ?></p>
+                <p><?= $item['lastname']; ?></p>
+                <p><?= $item['message']; ?></p>
+                <p><?= $item['datemessage']; ?></p>
+            <?php endforeach; ?>
         <?php endif; ?>
 
         <!-- affichage des éléments des la DB -->
-        
-        <?php foreach ($resultLO as $item) : ?>
-            <p><?= $item['firstname']; ?></p>
-            <p><?= $item['lastname']; ?></p>
-            <p><?= $item['message']; ?></p>
-            <p><?= $item['datemessage']; ?></p>
-        <?php endforeach; ?>
+
     </div>
 
 </body>

@@ -16,7 +16,7 @@ try{
 }
 
 // insertion d'articles dans la DB par l'utilisateur :
-if (isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['message'])) {
+if (isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['message'])){
 
     $firstname = htmlspecialchars(strip_tags(trim($_POST['firstname'])));
     $lastname = htmlspecialchars(strip_tags(trim($_POST['lastname'])));
@@ -25,29 +25,25 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['m
 
 
     # si les champs sont bons (ici vide, donc une seule erreur générale)
-    if (!empty($firstname) && !empty($lastname) && filter_var($usermail,FILTER_VALIDATE_EMAIL) &&!empty($message)) {
+    if (!empty($firstname)&&!empty($lastname)&&filter_var($usermail,FILTER_VALIDATE_EMAIL)&&!empty($message)) {
 
         # insertion partie SQL
         $sqlInsert = "INSERT INTO `livreor` (`firstname`,`lastname`, `usermail`, `message`) VALUES ('$firstname','$lastname', '$usermail', '$message');";
-
-        try{
-
+        
+        try{      
             mysqli_query($dbLO, $sqlInsert);
-            $messageRetour = "t'es bien inscrit copain!";
-
-        }catch(Exception $e){
-
+            header("Location: ./");
+                      
+        }catch(Exception $e){          
             if($e->getCode()==1406){
                 # création de l'erreur
-                $message = "Un champs est trop long";
-
-            }elseif($e->getCode()==1062){
-                # création de l'erreur
-                $message = "Vous êtes déjà inscrit avec ce mail";
+                $messageRetour = "Un champs est trop long";              
+            }else{
+                $messageRetour = "il y a un problème! rééssayez!";
             }
         }
     }else{
-         if(!filter_var($usermail,FILTER_VALIDATE_EMAIL)){
+        if(!filter_var($usermail,FILTER_VALIDATE_EMAIL)){
             $messageRetour = "mail pas valide";
         }else{
             $messageRetour = "il y a un problème! rééssayez!";
@@ -56,8 +52,17 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['m
 }
 
 // recupération des messages qui sont dans la DB (nom prénom messages et date) : 
-$sqlLO = "SELECT `firstname`, `lastname`, `message`, `datemessage` FROM `livreor` ORDER BY `datemessage` DESC;";
-$queryLO = mysqli_query($dbLO, $sqlLO);
+$sqlLO = "SELECT `firstname`, `lastname`, `message`, `datemessage` FROM `livreor` ORDER BY `datemessage` ASC;";
+
+try{
+    $queryLO = mysqli_query($dbLO, $sqlLO);
+
+}catch(Exception $e){
+
+    exit(mb_convert_encoding($e->getMessage(), 'UTF-8', 'ISO-8859-1'));
+
+}
+
 $nbLO = mysqli_num_rows($queryLO);
 $resultLO = mysqli_fetch_all($queryLO, MYSQLI_ASSOC);
 
