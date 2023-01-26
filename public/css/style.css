@@ -1,10 +1,130 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: rgba(117, 235, 235, 0.39);
+}
+h1 {
+	text-align: center;
+	color: rgb(61, 104, 185);
+	font-size: 3rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-body {
-    background-color: rgba(17, 231, 231, 0.39);
+
+/* style du formulaire */
+.form-container {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: auto;
+	background-color: rgb(61, 104, 185);
 }
+
+form h2 {
+	text-align: center;
+	color: white;
+	padding-top: 1.5rem;
+}
+
+.logo {
+	width: 70%;
+	margin: auto;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.form-container {
+    margin-bottom: 2rem;
+}
+
+.form-container input, .form-container textarea, .form-container label {
+	width: 90%;
+	margin: auto;
+	height: 2rem;
+	font-weight: bold;
+}
+
+.form-container input, .form-container h2, textarea {
+	margin-bottom: 2rem;
+}
+.form-container textarea{
+    height: 15rem;
+}
+
+.form-container button {
+    margin: auto;
+	width: 90%;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.cap {
+    display: block;
+	margin: auto;
+	width: 70%;
+    height: fit-content;
+	background-color: rgba(128, 128, 128, 0.39);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.cap button {
+    display: block;
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 1rem;
+}
+
+.cap input {
+    display: block;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 0.5rem;
+}
+
+#error {
+    font-size: 0;
+}
+
+.invalide p {
+    display: block;
+    position: relative;
+    font-size: 5rem;
+    color: red;
+}
+
+#captchaOutput {
+    margin: auto;
+	border-radius: 10px;
+	background-color: black;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.message-container{
+    width: 90%;
+    margin: auto;
+}
+
+.messages {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(124, 124, 124, 0.267);
+    border: solid 2px black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
