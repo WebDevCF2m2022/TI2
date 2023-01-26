@@ -1,0 +1,28 @@
+*  {
+    box-sizing: border-box; /*le rembourage et la bordure sont inclus ds la largeur et la hauteur totale des Ã©lÃ©ments*/
+
+}
+
+/* For mobile phones: */
+@media all and (max-width:400px) {
+    .form-input {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        background-color: aqua;
+    }
+
+    .form-input {
+        width: 90%;
+        margin: auto;
+    }
+
+/*.theMail{
+    display: block;
+}*/
+}
+/*For tablette: */
+
+@media all and (max-width:800px) {
+   
+}
