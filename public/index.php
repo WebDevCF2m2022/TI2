@@ -30,22 +30,25 @@ try{
 
   # si les champs sont pas vide (on seul erreur generfal)
             if(!empty($nom)&& !empty($email)){
+              /*
 var_dump($prenom); 
 var_dump($nom); 
 var_dump($email);
 var_dump($msg); 
-
+*/
                        #insertion partie SQL 
-                  $sqlInsertMail = "INSERT INTO `livreor` (`firstname`,`lastname`, `usermail`,`message`) VALUES ('$prenom','$nom','$email',$msg);";
-var_dump($sqlInsertMail); 
+                  $sqlInsertMail = "INSERT INTO `livreor` (`id`, `firstname`, `lastname`, `usermail`, `message`, `datemessage`) VALUES (NULL, '$prenom', '$nom', '$email', '$msg', current_timestamp())";
+/*var_dump($sqlInsertMail); */
                 #requete avec try catch 
                try{
                   #requête
                 mysqli_query($db,$sqlInsertMail); 
                  $message ="Merci pour votre message envoyer"; 
+                 header("Location: ./");  // il enregiste plus apres dans base de donne :)) c'est un probleme que le je fait 11 fois :)
                  ?>
                  <h2><?=$message?></h2>
                  
+
                <?php
                }catch(Exception $e){
                # echo $e->getCode(); 
@@ -78,8 +81,8 @@ var_dump($sqlInsertMail);
         #chargement de tous les mails 
 
       #requette en variables texte contenant du MySql
-    $sqlMail = "SELECT  `firstname`,`lastname`, `usermail`,`message` FROM `livreor`
-    ORDER BY `datemessage` ASC;";
+    $sqlMail = "SELECT   `firstname`, `lastname`, `usermail`, `message`, `datemessage` FROM `livreor`
+    ORDER BY `datemessage` DESC;";
 
 
     # execution de la requete avec un try 
@@ -95,6 +98,7 @@ var_dump($sqlInsertMail);
 
     # on compte le nombre de mails récupêres 
     $nbMail = mysqli_num_rows($queryMail); 
+ 
 
 
       #on convertit les mails récupers en tableaux associatifs integres dans un tableau indexe

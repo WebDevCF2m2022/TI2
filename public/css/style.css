@@ -1,61 +1,98 @@
-
-
-
-/* ecran plus de 800px**/
-form{
-    width: 600px;
-    height: 100px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    display: flex;
-    padding: 100px;
-    margin-left: 30%;
-    margin-top: 100px;
-
-}
-.login,.pwd{
-    margin: 20px 20px;
-}
-.button{
-    margin: 40px 20px;
-}
-
-
-@media screen and (min-width: 400px) and (max-width:800px) {
-    form {
-            width: 300px;
-            height: 100px;
+        /* ecran plus de 800px**/
+        form{
+            width: 800px;
+           /* height: 200px;*/
+            border: 2px solid #000;
+            /* border-radius: 10px; */
+            display: flex;
+            flex-direction: column;
             padding: 50px;
-            border: 2px solid red;
-            border-radius: 10px;
-            display: block;
+            margin-left: 20%;
+            margin-top: -415px;
+            background-color: #2196f3;
         }
-    
-        div {
+        .login{
             margin: 20px 20px;
         }
-    
-        .button {
-            margin-left: 35%;
+        .button{
+            margin: 40px 20px;
         }
-    }
-
-@media screen and (max-width:400px) {
-    form {
-        width: 200px;
-        height: 100px;
-        padding: 50px;
-        border: 2px solid blue;
-        border-radius: 10px;
-        display: block;
-    }
-
-   .login,.pwd {
-        margin: 10px 10px;
-    }
-
-    .button {
-        margin: 0px 0px;
-        margin-left: 35%;
-    }
-}
+        img{
+            width: 385px;
+        }
+        h1{
+            font-size: 2em;
+            text-align: center;
+            color:#2196f3; 
+        }
+        h3{
+            text-align: center; 
+            color: #fff; 
+        }
+        .logpre,.lognom ,.logmsg, .logmail{
+            width:600px; 
+            padding:10px; 
+        }
+        
+        .logmsg{
+            height:100px; 
+          /*  position: absolute;
+            left: 525px;
+            top: 380px;*/
+        }
+        /*
+        .lognom{
+            position: absolute;
+            left: 525px;
+            top: 262px;
+        }
+        .logmail{
+            position: absolute;
+            left: 522px;
+            top: 325px;
+        }
+        .oblig{
+            position: absolute;
+            top: 495px;
+            left: 732px
+        }
+        */
+        
+        @media screen and (min-width: 400px) and (max-width:800px) {
+            form {
+                    width: 300px;
+                    height: 100px;
+                    padding: 50px;
+                    border: 2px solid red;
+                    border-radius: 10px;
+                    display: block;
+                }
+            
+                div {
+                    margin: 20px 20px;
+                }
+            
+                .button {
+                    margin-left: 35%;
+                }
+            }
+        
+        @media screen and (max-width:400px) {
+            form {
+                width: 200px;
+                height: 100px;
+                padding: 50px;
+                border: 2px solid blue;
+                border-radius: 10px;
+                display: block;
+            }
+        
+           .login,{
+                margin: 10px 10px;
+            }
+        
+            .button {
+                margin: 0px 0px;
+                margin-left: 35%;
+            }
+        }
