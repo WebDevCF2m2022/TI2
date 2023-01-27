@@ -126,18 +126,23 @@ form h2{
 }
 /**tablet*/
 @media screen and (min-device-width: 481px) and (max-device-width: 960px){
-    from{
-        width: 100px;
+    .login-container{
+        justify-content: center;
+        width: 200px;
     }
+
     from h2{
-        font-size: 2.4rem;
+        font-size: 1.4rem;
         margin:8px 0;
     }
     .img img{
-        width: 100px;
+        width: 200px;
     }
     .messageUser{
-        width: 100px;
+        width: 200px;
+    }
+    .txt{
+        top:500px; 
     }
 }
 
