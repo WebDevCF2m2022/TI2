@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST)
+//var_dump($_POST)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +14,11 @@ var_dump($_POST)
     <title>Livre d'or TI2</title>
 </head>
 <body>
-    
-    <?php
-        #si on a un message 
-        if(isset($message)):
-        #on l'afficher
-        ?>
-        <h4><?=$message?></h4>
-        <?php
-        endif; 
-          ?>
+
+  
    
    <div class="container">
+ 
         <div class="img">
             <img src="img/img1.svg">
             <div class="txt">
@@ -58,11 +51,20 @@ var_dump($_POST)
         </div>
     </div>
         <div class="login-container">
-
+      
 
             <form action="" method="POST" class="formulaire" name="lemail" id="monFormulaire">
                 <img src="img/avatar.svg" alt="" class="avatar">
                 <h2>Livre d'or</h2>
+                <?php
+                   #si on a un message 
+                     if(isset($message)):
+                     #on l'afficher
+                     ?>
+                     <h4 class="txtErr"><?=$message?></h4>
+                     <?php
+                      endif; 
+       ?>
                 <div class="input-div one">
                     <div>
                         <h5>Prenom *</h5>
@@ -89,6 +91,8 @@ var_dump($_POST)
                 </div>
              
                 <h6 class=oblig>(*) Ce champ est obligatoire </h6>
+            
+
                 
                 <div class=bordcaptcha>
                 <input type="button" class="btn" value="Envoyer" id="captchaValidate">
@@ -96,8 +100,7 @@ var_dump($_POST)
                     
                     <input id="captchaRefresh" type="button" value="Refresh"><br>
         
-                    <input id="captchaInput" type="text" placeholder="Entrez le captcha" require>
-                    <div><span></span></br></br></div>
+                    <input id="captchaInput" type="text" placeholder="Entrez le captcha" require><span></span></br></br>
             
             </form>
        

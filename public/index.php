@@ -44,27 +44,28 @@ var_dump($msg);
                try{
                   #requête
                 mysqli_query($db,$sqlInsertMail); 
-                 $message ='<span style="color:red;">Merci pour votre message envoyer </span>'; 
-                 header("Location: ./");  // il enregiste plus apres dans base de donne :)) c'est un probleme que le je fait 11 fois :)
+                 $message ='<span style="color:green;">Merci pour votre message envoyer </span>'; 
+                
                  ?>
-                 <h2><?=$message?></h2>
+                <!-- <h2><?=$message?></h2> il m'affiche plusieur fois -->
                  
 
                <?php
+               // header("Location: ./");  // il enregiste plus apres dans base de donne :)) c'est un probleme que le je fait 11 fois :) ? SI JE MISE IL AFICHE PLUS SMS 
                }catch(Exception $e){
                # echo $e->getCode(); 
       
                #avec les code sql on peut faire des erreur differents
                    if($e->getCode()==1406){
                    # creation du l'erreur
-                    $message='<span style="color:red;">vous email c est tres long </span>';
+                    $message='<span style="color:red;">!very long mail </span>';
                     ?>
                     <h2><?=$message?></h2>
                   <?php
                   //si il c'est un autre alors on a parte 
                   }elseif($e->getCode()){
                      #creatipon du l'erreur
-                     $message='<span style="color:red;">vous etes deja inscrite avec cette email</span>';
+                     $message='<span style="color:red;">now email pls </span>';
                      ?>
                      <h2><?=$message?></h2>
                    <?php
@@ -76,7 +77,7 @@ var_dump($msg);
      #sinon erreur
          }else{
             #creation de variable $message
-            $message='<span style="color:red;"> IL y a un probleme dans votre inscription svp reessailler</span>'; 
+            $message='<span style="color:red;"> you have a bug try again !</span>'; 
 
          }
         }
