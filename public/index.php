@@ -31,14 +31,16 @@ if(isset($_POST['firstname'])&& isset($_POST['usermail'])&& isset( $_POST['messa
        $sqlInsert = "INSERT INTO `livreor` (`firstname`, `lastname`, `usermail`, `message`) VALUES ('$prenom', '$nom', '$mail', '$messageUser')";
         # requête avec try catch
      
-        var_dump(($sqlInsert));
+      //  var_dump(($sqlInsert));
         try{
             # requête
       $result=mysqli_query($db,$sqlInsert);
-      header("Location: ./");
+     // header("Location: ./"); il affiche olus les msg 
             # si pas d'erreur création du texte
-            $info ="Merci pour votre inscription";
-
+            $info ='<span style="color:green;">Merci pour votre inscription</span>';
+            ?>
+            <h4><?=$info?></h4>
+            <?php
         }catch(Exception $e){
            # echo $e->getCode()
 
@@ -46,10 +48,16 @@ if(isset($_POST['firstname'])&& isset($_POST['usermail'])&& isset( $_POST['messa
             if($e->getCode()==1406){
                 # création de l'erreur
                 $info = "Un champs est trop long";
-
-            }elseif($e->getCode()==1062){
+                ?>
+                <h4><?=$info?></h4>
+                <?php
+//en cas d'autre erreur  
+            }elseif($e->getCode()){
                 # création de l'erreur
-                $info = "Vous êtes déjà inscrit avec ce mail";
+                $info = '<span style="color:red;">Vous êtes déjà inscrit avec ce mail</span>';
+                ?>
+                <h4><?=$info?></h4>
+                <?php
             }
             
         }

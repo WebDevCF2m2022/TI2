@@ -71,4 +71,4 @@ function redirection() {
     document.querySelector("#monFormulaire").requestSubmit(); // Envoyer un formulaire
 }
 
-captchaCF2M(redirection, 7)
+captchaCF2M(redirection, 7);

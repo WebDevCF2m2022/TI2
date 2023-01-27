@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST); 
+//var_dump($_POST); 
 ?>
 <?php
 # débugogage de la variable POST
@@ -11,74 +11,81 @@ var_dump($_POST);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/captcha.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/captcha.css" rel="stylesheet">
     <script src="js/captcha.js" defer></script>
     <title>Mail</title>
 </head>
 <body>
-    <h1>Mail</h1>
-    <h2>Formulaire</h2>
-    <?php
-    # si on a un message
-    if(isset($message)):
-        # on l'affiche
-    ?>
-    <h4><?=$message?></h4>
-    <?php
-    endif;
-    ?>
-    <!--<form name='lemail' action='' method="POST">
-            <input type="text" name="nomadresses" placeholder="votre nom" required><br>
-            <input type='email' name="mailadresses" placeholder="votre mail" required><br>
-            <input type="submit" value="Envoyer">
-        </form>-->
-           <form name='monFormulaire' action='' method="POST"> 
-        <div class="loginFormulaire" id="monFormulaire">
-      <div class="formTitle">
-        <h1>Member Login</h1>
-      </div>
-      <div class="form-input">
-        <label for="username">Prénom *</label>
-        <input type="text" name="firstname" placeholder="Saisissez votre prénom"  id="username" required />
-      </div>
-      <div class="form-input">
-        <label for="username">Nom</label>
-        <input type="text" name="lastname" placeholder="Saisissez votre nom"  id="username" />
-      </div>
-      <div class="form-input">
-        <label for="email">E-mail *</label>
-        <input type="email" name="usermail" placeholder="mail"  id="Saisissez votre email" required />
-      </div>
-      <div class="form-input">
-        <label for="Message">Message *</label>
-        <textarea name="message" placeholder="message"  id="message" required /></textarea>
-      </div>
-      <div class="captchaValidate">
-            <button id="captchaValidate">Valider</button>
-            <!--<button id="captchaRefresh">Refresh</button> -->
-          </div>
+<header class="titre">
+      <h1>Livre d'or</h1>
+    </header>
+    <main>
 
-      
-      <div class="captcha">
-        <label for="captcha">Entrer Captcha</label>
-        <div class="captc" id="captcha"></div>
+   
+    <?php
+        #si on a un message 
+        if(isset($info)):
+        #on l'afficher
+        ?>
+        <h4><?=$info?></h4>
+        <?php
+        endif; 
+          ?>
 
-        <div class="captcha-form">
-          <input
-            type="texte"
-            id="captchaInput"
-            placeholder="Entrer captcha text"
-          />
-          <div class="captchaValidate">
-            <!--<button id="captchaValidate">Login</button>-->
-           <button id="captchaRefresh">Refresh</button>
-          </div>
+<section class="conteneurpicform"> 
+        <div class="picture">
+          <img class="image" src="img/email.png">
         </div>
+        <div class="conteneurform">
+          <h2 class="titreform">Laissez-nous un message</h2>
+    <form action="" method="POST" class="formulaire" name="lemail" id="monFormulaire">
+    <div class="formTitle">    </div>
+       
       </div>
+         <div class="form-input">
+           <label for="username">Prénom *</label>
+           <input type="text" name="firstname" id="username"  required>
+         </div>
+         <div class="form-input">
+         <label for="username">Nom</label>
+        <input type="text" name="lastname" id="username" />
+            </div>
+
+      <div class="form-input">
+      <label for="email">E-mail *</label>
+           <input type="email" name="usermail" id="email" required>
+         </div>   
+
+    <div class="form-input">
+    <label for="Message">Message *</label>      
+    <textarea  name="message" id="message" require></textarea>
+         </div> 
+         <div class="endform">
+         <p class="stars">(*)Ce champs est obligatoire</p>
+         <div class="captchaValidate">
+        <button id="captchaValidate" type ="button" class="envoyer">Envoyer</button>
+        </div>
     </div>
-  
-    <h3>Les mails</h3>
+</section><br><br>
+<section>
+
+<aside>
+<div class="captcha"class="captchacolor">
+			<p id="captcha" ></p></br></br>
+            
+			<input id="captchaRefresh" type="button" value="Refresh"><br>
+      <div class="captcha-form">
+			<input id="captchaInput" type="text" placeholder="Entrez le captcha" require>
+            <div><span></span></br></br></div>
+<!-- je change avec input pour avoir le button submit aussi 
+			<button id="captchaValidate" type ="button">Valider</button>
+			<button id="captchaRefresh" type="button">Refresh</button>-->
+      </div>
+		</div>
+</aside>
+     </form>
+   <h3>Les mails</h3>
     <?php
     # pas de mail
     if(empty($nbMail)):
@@ -92,14 +99,15 @@ var_dump($_POST);
         # tant qu'on a des mail
         foreach($responseMail as $item):
         ?>
-<div class='theMail'>
+<div class="conteneurmsg">
     <?=$item['firstname']?>
-    <?=$item['lastname']?>
-    <?=$item['usermail']?>
+    
     <?=$item['datemessage']?>
     <br>
+  
     <?=$item['message']?>
   </div>
+
         <?php
         endforeach;
     endif;
