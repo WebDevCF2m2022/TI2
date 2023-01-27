@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+h1 {
+    text-align: center;
+    color: #427ca0;
+    font-size: 4vh;
+    font-family: 'Poppins', sans-serif;
+    height: 3vh;
+    margin-top: 0;
+}
+
+#formulaire h2 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: antiquewhite;
+    max-width: 65%;
+}
+
+h6 {
+    color: white;
+}
+
+#monFormulaire p {
+    font-family: 'Poppins', sans-serif;
+}
+
+#formulaire {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #427ca0;
+    max-width: 100%;
+}
+
+#formulaire #monFormulaire{
+    text-align: center;
+}
+
+#formulaire #monFormulaire p{
+    text-align: left;
+    margin-left: 3%;
+}
+
+#formulaire #monFormulaire input{
+    width: 90%;
+    height: 4vh;
+    background-color: antiquewhite;
+    border: none;
+}
+
+#formulaire #monFormulaire textarea{
+    width: 90%;
+    height: 10vh;
+    background-color: antiquewhite;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 75%;
+    max-height: auto;
+    width: 36vh;
+    height: 36vh;
+}
+
+#commentaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15vh;
+    width: 90%;
+}
+
+/* Container */
+#affiche{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 95%;
+}
+
+/* Titre et date */
+#affiche h4{
+    margin-bottom: 10vh;
+    max-width: 95%;
+}
+
+/* Les données SQL*/
+#affiche span{
+    max-width: 95%;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 300px) {
+    img {
+        transition: 0.5s;
+        width: 25vh;
+        height: 25vh;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+
+}
