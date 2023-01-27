@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `ti2`
 --
-DROP DATABASE IF EXISTS `ti2`;
+
 CREATE DATABASE IF NOT EXISTS `ti2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `ti2`;
 
@@ -25,7 +25,7 @@ USE `ti2`;
 -- Structure de la table `livreor`
 --
 
-DROP TABLE IF EXISTS `livreor`;
+
 CREATE TABLE IF NOT EXISTS `livreor` (
                                          `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
                                          `firstname` varchar(100) NOT NULL,

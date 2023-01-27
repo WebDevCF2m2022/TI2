@@ -1,0 +1,172 @@
+body{
+    width: 100vw;
+    margin: 0 auto;
+    background-image: url(../img/fond.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+
+}
+.pageflex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteneurChampsLabelInput{
+    display: flex;
+    flex-direction: column;
+}
+.conteneurChampsLabelInput
+#tableau{
+    border-radius: 10px;
+    width: 80vw;
+    margin: 0 auto;
+    object-fit: contain;
+    overflow: hidden;
+}
+table{
+    border-style: solid hidden solid;
+    border-color: white;
+    border-width: 1px;
+    max-width: 480px;
+    table-layout: fixed;
+    width: 80vw;
+    border: 1px solid white;
+    padding-right: 2em;
+    margin: 2em 0;
+    border-radius: 15px;
+    background-color: rgb(101, 159, 192);
+}
+.titreTableau {
+    font-size: 1em;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 1em;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 0.8em;
+    margin-right: 1em;
+    padding-left: 1em;
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+input{
+    border-radius: 5px;
+    height: 2em;
+    margin-bottom: 2em;
+    font-size: 1.2em;
+}
+
+textarea{
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 1em;
+}
+.labelcommentaire{
+    margin-top: 2em;
+}
+label{
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    font-weight: 500;
+}
+form{
+    width: 80vw;
+    background-color: #56add5;
+    padding: 2em;
+}
+#titre{
+    font-size: 3em;
+    color: white;
+}
+.message{
+    color: white;
+    font-size: 2.5em;
+}
+.nbMessage{
+    color: white;
+    font-size: 1.2em;
+}
+
+td{
+    font-weight: 500;
+
+}
+.positionbouton {
+    display: block;
+    text-align: center;
+}
+@media screen and (min-width:480px) and (max-width:960px){
+  table{
+    min-width: 750px;
+  }
+  .conteneurChampsLabelInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.conteneurChampsLabelInput input{
+    width: 40vw;
+    margin-right: 2em;
+}
+.conteneurChampsLabelInput label{
+    margin-left: 2em;
+
+}
+textarea{
+    margin:2.1em;
+    height: 15em
+}
+
+}
+@media screen and (min-width:960px){
+    table{
+        min-width: 1500px;
+        max-width: none;
+      }
+      .conteneurChampsLabelInput{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .conteneurChampsLabelInput input{
+        width: 40vw;
+        margin-right: 4em;
+    }
+    .conteneurChampsLabelInput label{
+        margin-left: 4em;
+    
+    }
+    textarea{
+        margin-right: 6em;
+        width: 40vw;
+        height: 20em;
+    }
+    form {
+        width: 60vw;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .pageflex{
+        display: flex;
+        flex-direction: row;
+    }
+    .labelcommentaire{
+        margin-top: 1em;
+    }
+    input{
+        margin: 0 0 ;
+    }
+}
