@@ -21,10 +21,10 @@
         <img id="satisfaction" src="img/Satisfaction.jpg" alt="Donnez votre avis">
         <section><!--formulaire-->
             <form name='livret' action='' method="POST">
-                <div class="champs"><label for="nom">Nom*</label><input type="text" name="lastname" placeholder="Indiquez votre nom" required></div>
-                <div class="champs"><label for="prenom">Prénom*</label><input type="text" name="firstname" placeholder="Indiquez votre prénom" required></div>
-                <div class="champs"><label for="mailadresses">E-mail*</label><input type='email' name="usermail" placeholder="Indiquez votre e-mail" required></div>
-                <div class="champs"><label for="avis">Votre avis*</label><textarea maxlength="600" name="message" placeholder="Indiquez votre avis" required></textarea></div>
+                <div class="champs"><label for="lastname">Nom*</label><input type="text" name="lastname" placeholder="Indiquez votre nom" required></div>
+                <div class="champs"><label for="firstname">Prénom*</label><input type="text" name="firstname" placeholder="Indiquez votre prénom" required></div>
+                <div class="champs"><label for="usermail">E-mail*</label><input type='email' name="usermail" placeholder="Indiquez votre e-mail" required></div>
+                <div class="champs"><label for="message">Votre avis*</label><textarea maxlength="600" name="message" placeholder="Indiquez votre avis" required></textarea></div>
                 <div class="envoi"><p>(*Champs obligatoires)</p></div>
                 <div class="envoi"><input id="bouton" type="submit" value="Envoyer"></div>        
             </form>
@@ -35,8 +35,8 @@
 		<p id="captcha"></p>
 		<input id="captchaInput" type="text"  placeholder="Tapez le captcha"><br>
 		<button id="captchaValidate">Valider</button>
+        <button id="captchaRefresh">Refresh</button>
 	</div>
 
-    
 </body>
 </html>

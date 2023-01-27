@@ -1,5 +1,4 @@
 .card {
-	
 	border:2px solid #000;
 	border-radius: 10px;
 	padding: 2em;
@@ -32,9 +31,9 @@ button {
 
 	border: 1px solid #0003;
 	border-radius: 10px;
-	
 }
 #captchaInput{
+	max-width: 150px;
 	background-color: rgb(151, 100, 34);
 }
 span {

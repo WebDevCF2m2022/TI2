@@ -61,6 +61,9 @@ form{
     display: flex;
     justify-content: center;
 }
+.envoi>input{
+    max-width: 250px;
+}
 input, textarea{
     width: 100ch;  /*ch pour charactères*/
 }

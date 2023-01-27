@@ -45,11 +45,11 @@ const captchaHome = (callback, captchaLength) => {
 
     /* AJOUT DES ÉCOUTEURS D'ÉVÉNEMENTS*/
     captchaValidate.addEventListener('click', validateCaptcha);
-    captchaRefresh.addEventListener('click', generateCaptcha);
+    //captchaRefresh.addEventListener('click', generateCaptcha);
 
     /* LANCEMENT AU CHARGEMENT */
     generateCaptcha(captchaLength);
 
 }
 
-captchaHome(redirection,7);
+// captchaHome(redirection,7);
