@@ -4,6 +4,8 @@ h1 {
     text-align: center;
     color: #ffc800;
     width: 100%;
+    font-size: 66px;
+    text-transform: uppercase;
 }
 
 /* Formulaire */
