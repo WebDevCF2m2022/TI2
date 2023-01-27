@@ -8,7 +8,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Formulaire */
+/* Formulaire & bouton captcha */
 
 .theMail {
     border: solid 2px black;
@@ -24,11 +24,13 @@ h1 {
 #captchaValidate {
     width: 25%;
     height: 45px;
-    background-color: rgb(255, 174, 0);
+    background-color: #ffb5076c;
     text-transform: uppercase;
     border-radius: 15px;
     margin-left: 35%;
     font-size: 18px;
+    opacity: 0.8;
+    
 }
 
 #captchaValidate:hover {
@@ -41,11 +43,14 @@ h1 {
 #captchaRefresh {
     width: 25%;
     height: 45px;
-    background-color: rgb(255, 174, 0);
+    background-color: rgba(196, 57, 3, 0.598);
     text-transform: uppercase;
     border-radius: 15px;
     margin-left: 35%;
     font-size: 18px;
+    opacity: 0.8;
+    
+    
 }
 
 #captchaRefresh:hover {
@@ -55,6 +60,9 @@ h1 {
     text-transform: uppercase;
 }
 
+.btnInline {
+    text-align: center;
+}
   
   input[type=text], textarea, input[type=email] {
     width: 100%;

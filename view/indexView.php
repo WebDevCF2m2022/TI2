@@ -37,8 +37,8 @@
             <p id="captcha"></p></br></br>            
             <input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span>
             </br></br>            
-            <button id="captchaValidate" type="button">Valider</button>            
-            <button id="captchaRefresh" type="button">Refresh</button>        
+            <button class="btnInline" id="captchaValidate" type="button">Valider</button>            
+            <button class="btnInline" id="captchaRefresh" type="button">Refresh</button>        
         </div>    
             <h3>Messages précédents</h3>   
         <?php
@@ -51,7 +51,7 @@
     # on a au moins un mail
     else:
         # affichage du nombre de mail
-        ?>    <h4>Il y a <?=$nbMail?> mail(s) enregistré(s)</h4>        
+        ?>    <h4>Il y a <?=$nbMail?> message(s) enregistré(s)</h4>        
     <?php
         # tant qu'on a des mail
         foreach($responseMail as $item):

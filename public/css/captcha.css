@@ -3,10 +3,16 @@
 	-ms-user-select: none; /* IE 10+ */
 	user-select: none;
 
-	background-color: black;
-	display: inline;
+	background-color: rgba(0, 0, 0, 0.934);
+	display: block;
 	padding: 0.8em;
-	border-radius: 5px;
+	border-radius: 55px;
+    width: 25%;
+    text-align: center;
+    margin-left: 37%;
+   
+    
+
 }
 
 .invalidCaptcha {

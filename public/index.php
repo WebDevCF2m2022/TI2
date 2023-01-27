@@ -30,26 +30,26 @@ if(isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['me
             # requête
             mysqli_query($db,$sqlInsert);
             # si pas d'erreur création du texte
-            $messageZ ="Merci pour votre inscription";
+            $message ="Merci pour votre message, nous vous recontacterons !";
         }catch(Exception $e){
            # echo $e->getCode();
            # avec le code erreur SQL on peut faire des erreurs différentes, idem avec le $e->getMessage() etc...
             if($e->getCode()==1406){
                 # création de l'erreur
-                $messageZ = "Un champs est trop long";
+                $message = "Un champs est trop long";
             }elseif($e->getCode()==1062){
                 # création de l'erreur
-                $messageZ = "Vous êtes déjà inscrit avec ce mail";
+                $message = "Vous êtes déjà inscrit avec ce mail";
             }
         }
     # sinon erreur
     }else{
         # création de la variable $message
-        $messageZ = "Il y a eu un problème lors de votre inscription, veuillez réessayer";
+        $message = "Il y a eu un problème lors de votre envoi, veuillez réessayer";
     }
 }
 else {
-    $messageZ ="lulu";
+    $message ="";
 }
 # chargement de tous les mails
 // requête en variable texte contenant du MySQL
