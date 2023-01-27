@@ -115,30 +115,34 @@ form h2{
    /* background-size: 200%;*/
 }
 
-@media screen and (max-width:1050px) {
+
+
+
+/**desktop**/
+@media screen and (min-width:961px) {
     .container{
         grid-gap:5rem; 
     }
 }
-
-@media screen and (max-width:900px) {
+/**tablet*/
+@media screen and (min-device-width: 481px) and (max-device-width: 960px){
     from{
-        width: 290px;
+        width: 100px;
     }
     from h2{
         font-size: 2.4rem;
         margin:8px 0;
     }
     .img img{
-        width: 400px;
+        width: 100px;
     }
     .messageUser{
-        width: 390px;
+        width: 100px;
     }
 }
 
-
-@media screen and (max-width:700px){
+/** smartphone*/
+@media screen and (max-width:480px){
     .img{
         display: none; 
     }
