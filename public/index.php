@@ -73,7 +73,7 @@ if(isset($_POST['firstname'], $_POST['lastname'],$_POST['usermail'],$_POST['mess
     }
 
 }
-else {$message = 'gfhg';}
+else {$message = '';}
 
 // requête en variable texte contenant du MySQL
 $sqlMail = "SELECT `lastname`,`firstname`,`usermail`, `message` FROM `livreor` ORDER BY `datemessage` DESC; ";
