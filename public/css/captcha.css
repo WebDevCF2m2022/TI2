@@ -8,7 +8,7 @@
 	min-width: 250px;
 	margin: auto;
 	text-align: center;
-	background: #fff;
+	background: rgb(181, 247, 247);
 	box-shadow: 0px 2px 16px rgba(0,0,0,0.2) ;
 }
 button {
@@ -28,13 +28,16 @@ button {
 	width: 100%;
 	margin: 1em auto;
 	padding: 1em;
-
 	border: 1px solid #0003;
 	border-radius: 10px;
 }
+.box_captcha{
+	background-color: rgb(205, 231, 59);
+	border-radius: 5px;
+	border: 2px solid black;
+}
 #captchaInput{
 	max-width: 150px;
-	background-color: rgb(151, 100, 34);
 }
 span {
 	display: inline-block;

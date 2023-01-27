@@ -67,6 +67,11 @@ form{
 input, textarea{
     width: 100ch;  /*ch pour charactères*/
 }
+@media screen and (max-width:960px){ 
+    input, textarea{
+        width: 40ch;
+    }
+}
 form p{
     text-align: center;
 }

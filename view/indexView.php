@@ -24,7 +24,7 @@
                 <div class="champs"><label for="lastname">Nom*</label><input type="text" name="lastname" placeholder="Indiquez votre nom" required></div>
                 <div class="champs"><label for="firstname">Prénom*</label><input type="text" name="firstname" placeholder="Indiquez votre prénom" required></div>
                 <div class="champs"><label for="usermail">E-mail*</label><input type='email' name="usermail" placeholder="Indiquez votre e-mail" required></div>
-                <div class="champs"><label for="message">Votre avis*</label><textarea maxlength="600" name="message" placeholder="Indiquez votre avis" required></textarea></div>
+                <div class="champs"><label for="avis">Votre avis*</label><textarea maxlength="600" name="message" placeholder="Indiquez votre avis" required></textarea></div>
                 <div class="envoi"><p>(*Champs obligatoires)</p></div>
                 <div class="envoi"><input id="bouton" type="submit" value="Envoyer"></div>        
             </form>
@@ -32,11 +32,34 @@
     </div>
     <div class="vide"></div>
     <div class="card">   <!--pour TOUT le captcha-->
-		<p id="captcha"></p>
+		<p id="captcha" class="box_captcha"></p>
 		<input id="captchaInput" type="text"  placeholder="Tapez le captcha"><br>
 		<button id="captchaValidate">Valider</button>
         <button id="captchaRefresh">Refresh</button>
 	</div>
 
+    <h3>Les mails</h3>
+    <?php
+    # pas de mail
+    if(empty($nbMail)):
+    ?>
+    <h4>Pas encore d'adresses</h4>
+    <?php
+    # on a au moins un mail
+    else:
+        # affichage du nombre de mail
+        ?>
+    <h4>Nous avons <?=$nbMail?> adresses inscrites</h4>
+        <?php
+        # tant qu'on a des mail
+        foreach($responseMail as $item):
+        ?>
+<div class='theMail'>
+   <p>  <?=$item['firstname']?> a envoyé ce message le <?=$item['datemessage']?>: <br> <?=$item['message']?></p>  <!--$item['lastname']  nom retiré par souci d'anonymat MAIS required quand je veux contacter pour un message -->
+</div>
+        <?php
+        endforeach;
+    endif;
+    ?>
 </body>
 </html>
