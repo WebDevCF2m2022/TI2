@@ -1,0 +1,130 @@
+/* Smartphone 600px et - */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin-bottom: 35px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(128, 181, 255);
+    margin: 10px;
+    text-align: left;
+    border-radius: 50px;
+    width: 50vw;
+}
+
+h2 {
+    margin:50px auto;
+}
+
+/*label {
+    margin-left: 10px;
+    margin-top: 20px;
+}*/
+
+/*form input {
+    height: 30px;
+    margin: 0 10px 0 10px;
+}*/
+
+/*form button {
+    width: 33%;
+    margin: auto;
+    margin-bottom: 20px;
+}*/
+.ligne:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .coll25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .coll75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(128, 181, 255);
+}
+
+p {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.leMsge {
+    background-color: aliceblue;
+    border: solid 1px black;
+    border-radius: 20px;
+    margin: 4px;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+#messages {
+    background-color: aliceblue;
+    margin: 10px;
+}
+
+#message {
+    height: 100px;
+    margin: 0 10px 0 10px;
+}
+
+h3 {
+    position: relative; 
+    left: -100px;
+    font-size: 22px;
+}
+
+h4 {
+    position: relative;
+    left: -135px;
+    top: -25px;
+}
+.divCaptcha {
+    margin: auto;
+    padding: 0 15px 15px 15px;
+    position: relative;
+    top: 15px;
+}
+/* Tablette 480 à 960px */
+@media screen and (min-width:480px) and (max-width:960px) {
+form {
+    width: 85vw;
+}
+}
+
+/* Grand Ecran 960px et + */
+@media screen and (min-width:960px) {
+
+}
