@@ -1,10 +1,12 @@
 .card {
+	
 	border:2px solid #000;
+	border-radius: 10px;
 	padding: 2em;
-	width: auto;
+	width: 25%;
 	height: auto;
-	min-height:250px;
-	min-width: 300px;
+	min-height:200px;
+	min-width: 250px;
 	margin: auto;
 	text-align: center;
 	background: #fff;
@@ -18,7 +20,8 @@ button {
 	cursor: pointer;
 	border: 1px solid #000;
 }
-#captcha{
+.captcha{
+	text-align: center;
 	user-select: none;
 	display: flex;
 	flex-direction: row;
@@ -26,8 +29,13 @@ button {
 	width: 100%;
 	margin: 1em auto;
 	padding: 1em;
+
 	border: 1px solid #0003;
-	text-align: center;
+	border-radius: 10px;
+	
+}
+#captchaInput{
+	background-color: rgb(151, 100, 34);
 }
 span {
 	display: inline-block;
@@ -35,6 +43,7 @@ span {
 	margin: 0 2px;
 }
 
+/*pour les couleurs - cerveau trop KO pour commencer à faire tout ce qui est random des couleurs */
 .spe-a, .spe-b, .spe-c, .spe-q, .spe-z { color: #5c23ce; }
 .spe-d, .spe-e, .spe-f, .spe-1, .spe-2 { color: #0f810f; }
 .spe-g, .spe-h, .spe-i, .spe-3 { color: #173ea8; }

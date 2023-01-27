@@ -12,6 +12,11 @@ html{
 h1{
     text-align: center;
 }
+.vide{
+    height: 2em;
+}
+
+/* MON FORMULAIRE */
 h2{
     text-align: center;
 }
@@ -27,12 +32,11 @@ h2{
 img{
     margin: 0 auto;
 }
-
 #satisfaction{
-    padding-right: 10px;
-    padding-top: 10px;
-    border-radius: 4000px;
-    border: 2px solid black;
+    padding-right: 10px; /*pour un peu plus joliment centrer l'image*/
+    padding-top: 10px;  /* idem*/
+    border-radius: 4000px;   /*comme ça restera toujours rond*/
+    border: 2px solid black; 
 }
 form{
     max-width: 120ch;
@@ -58,7 +62,7 @@ form{
     justify-content: center;
 }
 input, textarea{
-    width: 50ch;  /*ch pour charactères*/
+    width: 100ch;  /*ch pour charactères*/
 }
 form p{
     text-align: center;

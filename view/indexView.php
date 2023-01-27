@@ -30,10 +30,11 @@
             </form>
         </section>
     </div>
-    <div class="card">
+    <div class="vide"></div>
+    <div class="card">   <!--pour TOUT le captcha-->
 		<p id="captcha"></p>
-		<input type="text" id="captchaInput" placeholder="Tapez le captcha"><br>
-		<button id="captchaValidate">Valider</button> 	<button id="captchaRefresh">Refresh</button>
+		<input id="captchaInput" type="text"  placeholder="Tapez le captcha"><br>
+		<button id="captchaValidate">Valider</button>
 	</div>
 
     
