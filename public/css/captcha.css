@@ -1,0 +1,65 @@
+.card {
+	border:2px solid #000;
+	border-radius: 10px;
+	padding: 2em;
+	width: 25%;
+	height: auto;
+	min-height:200px;
+	min-width: 250px;
+	margin: auto;
+	text-align: center;
+	background: rgb(181, 247, 247);
+	box-shadow: 0px 2px 16px rgba(0,0,0,0.2) ;
+}
+button {
+	margin: 1em 2px 0;
+	border-radius: 4px;
+	background: #fff;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	border: 1px solid #000;
+}
+.captcha{
+	text-align: center;
+	user-select: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin: 1em auto;
+	padding: 1em;
+	border: 1px solid #0003;
+	border-radius: 10px;
+}
+.box_captcha{
+	background-color: rgb(205, 231, 59);
+	border-radius: 5px;
+	border: 2px solid black;
+}
+#captchaInput{
+	max-width: 150px;
+}
+span {
+	display: inline-block;
+	font-size: 24px;
+	margin: 0 2px;
+}
+
+/*pour les couleurs - cerveau trop KO pour commencer à faire tout ce qui est random des couleurs */
+.spe-a, .spe-b, .spe-c, .spe-q, .spe-z { color: #5c23ce; }
+.spe-d, .spe-e, .spe-f, .spe-1, .spe-2 { color: #0f810f; }
+.spe-g, .spe-h, .spe-i, .spe-3 { color: #173ea8; }
+.spe-j, .spe-k, .spe-m, .spe-7, .spe-8, .spe-9 { color: #f54040; } 
+.spe-n, .spe-o, .spe-p, .spe-r, .spe-s { color: #9900cc; }
+.spe-t, .spe-u, .spe-v, .spe-4, .spe-5, .spe-6  { color: #0099cc; }
+.spe-w, .spe-x, .spe-y { color: #cc0099; }
+
+.spe-a, .spe-d, .spe-g { font-weight: bold; }
+.spe-j, .spe-m, .spe-p { font-family: sans-serif; }
+.spe-s, .spe-v, .spe-y { font-size: 2.1em; }
+.spe-1, .spe-4, .spe-7 { font-size: 2.9em; }
+.spe-b, .spe-e, .spe-h { font-weight: bold;}
+
+.spe-o, .spe-r { font-family: cursive; } 
+.spe-u, .spe-x { font-family: monospace; }
+.spe-3, .spe-6, .spe-9 { font-family: fantasy; }
