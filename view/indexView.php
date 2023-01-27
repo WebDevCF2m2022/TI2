@@ -84,7 +84,7 @@
         foreach($responseMessage as $item):
         ?>
         </div>
-<div class='lesmessages'> <span id="auteur"><?=$item['firstname']?> <span id="pasdebold"> à envoyer ce message le </span><em><?=$item['datemessage']?></em></span>  <br><?=$item['message']?></div>
+<div class='lesmessages'> <span id="auteur"><?=$item['firstname']?> <span id="pasdebold"> à envoyer ce message le </span><em><?=$item['datemessage']?></em></span><?=$item['message']?></div>
         <?php
         endforeach;
     endif;

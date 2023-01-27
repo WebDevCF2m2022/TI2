@@ -15,9 +15,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `ti2`
 --
-DROP DATABASE IF EXISTS `ti2`;
-CREATE DATABASE IF NOT EXISTS `ti2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `ti2`;
 
 -- --------------------------------------------------------
 
