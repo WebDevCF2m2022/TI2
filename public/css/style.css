@@ -1,0 +1,151 @@
+.imageD{
+    display: flex;
+}
+.imageD img{
+    height: 200px;
+    width: auto;
+}
+
+
+.formulaire{
+    width: 80%;
+    background-color: #427ca0;
+    /*flex: 1;*/
+    display: inline-block;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+.formulaire h2{
+    text-align: center;
+    color: white;
+}
+h1{
+    color :#427ca0;
+    text-align: center;
+}
+button{
+    justify-items: center;
+}
+h4{
+    text-align: center;
+}
+.client{
+    display: block;
+    border: 2px solid black;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    box-shadow:1px 3px #888888;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.client h4{
+    text-align: left;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.messageUser{
+    margin-left: 5px;
+    
+}
+
+.formulaire input{
+    width: 80%;
+    margin-left: 100px;
+    
+}
+.formulaire textarea{
+     width: 80%;
+     height: 70px;
+     margin-left: 100px;
+}
+.formulaire button{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+.formulaire p{
+    font-weight: 500;
+    font-size: larger;
+    margin-left: 20px;
+}
+.champs{
+    text-align: center;
+    color: white;
+}
+#affiche p{
+    color: lightgreen;
+    text-align: center;
+}
+#erreur p{
+    color: red;
+    text-align: center;
+}
+
+@media screen and (min-width:480px) and (max-width:960px) { /* responsive tablette*/
+    
+    
+        .imageD img {
+        display: flex;
+        float: top;
+        position: absolute;
+        margin-left: 40%;
+        }
+        .formulaire{
+            display: flex;
+            justify-content: center;
+            margin-top: 25vh;
+            width: 100%;
+        }
+
+        #monFormulaire h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #monFormulaire p{
+            position: absolute;
+            float: left;
+            left: 20px;
+        }
+        #monFormulaire input, textarea{
+            
+            width: 350px;
+        }
+        .formulaire button{
+            margin-top: 10px;
+        }
+       .champs {
+            margin-left: 125px;
+            
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        .formulaire input {
+        width: 80%;
+        margin-left: -15px; 
+        margin-top: 20px;
+        }
+
+        .formulaire textarea {
+            width: 80%;
+            height: 70px;
+            margin-left: -15px;
+            margin-top: 20px;
+    }
+    .imageD img {
+        
+        margin-left: 30%;
+    }
+    
+
+.champs {
+    margin-left: 12px;
+}
+}
