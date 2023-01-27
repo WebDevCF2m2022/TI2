@@ -21,69 +21,79 @@
         <h1>Livre d'or</h1>
         <img src="../public/img/email.png" alt="">
 
-        <div class="container">
+        <div class="formulaire">
             <?php
             # si on a un message
             if (isset($message)) :
                 # on l'affiche
             ?>
-
+                <h4><?= $message ?></h4>
             <?php
             endif;
             ?>
-            <form id="monFormulaire" action="" method="POST">
-                <h4><?= $message ?></h4>
+            <form id='monFormulaire' name='lemail' action='' method="POST">
+
                 <div class="row">
                     <div class="col-25">
-                        <label for="firstname">Prénom :</label>
+                        <label for="firstname">Prénom *:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="fname" name="firstname" placeholder="votre prénom..">
+                        <input type="text" id="name" name="firstname" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-25">
-                        <label for="lastname">Nom :</label>
+                        <label for="nom">Nom :</label>
+
                     </div>
                     <div class="col-75">
-                        <input type="text" id="lname" name="lastname" placeholder="votre nom..">
+                        <input type="text" id="nom" name="lastname">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-25">
-                        <label for="usermail">mail :</label>
+                        <label for="email"> mail *:</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="lname" name="usermail" placeholder="entrer votre email">
+                        <input type="email" id="mail" name="usermail" required>
                     </div>
                 </div>
-
 
                 <div class="row">
                     <div class="col-25">
-                        <label for="message">message :</label>
+                        <label for="msg">Votre message *:</label>
                     </div>
+
                     <div class="col-75">
-                        <textarea id="subject" name="message" placeholder="entrer votre message ici.." style="height:200px"></textarea>
+                        <textarea id="msg" name="message" cols="60" rows="5" maxlength="600"></textarea>
                     </div>
                 </div>
-                <p>(*) Ce champ est obligatoire</p>
+                <?php
+                if (empty($mess)) :
+                ?>
+                    <h3><?= $message1 ?></h3>
+                <?php
+                endif;
+                ?>
+                <p class="p1">(*) ce champ est obligatoire</p>
                 <div class="row">
-                    <input type="submit" value="Submit">
+                    <div class="submit">
+                        <button id="captchaValidate" type="button">Valider</button>
+                    </div>
                 </div>
+
+            </form>
+
 
         </div>
-        </form>
-        </div>
 
-        <p id="captcha"></p></br></br>
-        <button id="captchaRefresh" type="button">Refresh</button>
-        <input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span></br></br>
-        </form>
-        </div>
+        <div>
+            <p id="captcha"></p></br></br>
+            <input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span></br></br>
 
+            <button id="captchaRefresh" type="button">Refresh</button>
         </div>
         <h3>Les mails</h3>
         <?php

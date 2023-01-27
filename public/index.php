@@ -40,6 +40,7 @@ if (isset($_POST['firstname'], $_POST['usermail'], $_POST['message'])) {
 
             # si pas d'erreur création du texte
             $message = "Laissez-nous un message";
+            $message1 = "pas encore de message";
         } catch (Exception $e) {
             # echo $e->getCode();
 
