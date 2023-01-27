@@ -1,0 +1,139 @@
+
+        form{
+          width: 500px;
+          /* height: 200px; */
+          border: 2px solid #000;
+          /* border-radius: 10px; */
+          display: flex;
+          flex-direction: column;
+          padding: 50px;
+          margin-left: 32%;
+          margin-top: -461px;
+          background-color: #4294ad;
+      }
+      .login{
+          margin: 20px 20px;
+      }
+      .button{
+          margin: 40px 20px;
+      }
+      .img img{
+        width: 385px;
+        margin: 7px;
+        margin-left: 199px;
+      }
+      h1{
+          font-size: 2em;
+          text-align: center;
+          color:#000; 
+      }
+      h3{
+          text-align: center; 
+          color:#fff;  
+      }
+      .logpre,.lognom ,.logmsg, .logmail{
+          width:600px; 
+          padding:10px; 
+      }
+      .disC{
+        position: absolute;
+        top: 534px;
+        left: 838px;
+    
+      }
+      .logmsg{
+          height:100px; 
+          border: 2px solid #333;
+          border-radius: 10px;
+      }
+      .theMail{
+        margin-left: 199px;
+      }
+      /*
+      @media screen and (min-width: 400px) and (max-width:800px) {
+          form {
+                  width: 300px;
+                  height: 100px;
+                  padding: 50px;
+                  border: 2px solid red;
+                  border-radius: 10px;
+                  display: block;
+              }
+          
+              div {
+                  margin: 20px 20px;
+              }
+          
+              .button {
+                  margin-left: 35%;
+              }
+          }
+      
+      @media screen and (max-width:400px) {
+          form {
+              width: 200px;
+              height: 100px;
+              padding: 50px;
+              border: 2px solid blue;
+              border-radius: 10px;
+              display: block;
+          }
+      
+         .login,{
+              margin: 10px 10px;
+          }
+      
+          .button {
+              margin: 0px 0px;
+              margin-left: 35%;
+          }
+        }
+*/
+      /*
+  @media screen and(min-width:480px){
+    .container
+  } 
+  @media screen and(max-width: 480px) and (min-width:960px) {
+    .container{
+      width: 250px; 
+      justify-content: center
+    };
+    .image{
+      width: 200px;
+      justify-content: center;
+    }
+  }
+*/
+  @media screen and (max-width: 960px){
+    form{
+       
+      width: 406px;
+      display: inline-grid;
+      position: absolute;
+      top: 860px;
+      left: -134px;
+    }
+
+    img {
+      width: 278px;
+      margin-left: 234px;
+    }
+    h1{
+      font-size: 2em;
+    text-align: center;
+    color: #000;
+    padding: 26px;
+
+    }
+    .theMail{
+   
+    }
+    .disC{
+        position: absolute;
+        top: 457px;
+        left: 184px;
+    }
+    .txtM{
+      display: none;
+    }
+  }
