@@ -1,0 +1,53 @@
+/* For mobile phones: */
+    #captcha {
+        background-color: black;
+    }
+
+    .captcha {
+        
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none;
+    
+        background-color: rgba(245,245,220,255);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+        height: 125px;
+    }
+
+    .captchacolor {
+        /*background-color: black;*/
+        border-radius: 5px;
+        width: 40%;
+        text-align: center;
+        height: 45px;
+        padding: 5px;
+    
+    }
+
+    .invalidCaptcha + span::after {
+        content: "captcha invalide";
+        color: red;
+        font-size: 0.7em;
+        font-style: italic;
+        padding-left: 5px;
+    }
+    
+    .validCaptcha {
+        border: solid 2px green;
+        border-radius: 3px;
+    }
+    
+    .validCaptcha + span::after {
+        content: "vÃ©rification rÃ©ussie";
+        color: green;
+        font-size: 0.7em;
+        font-style: italic;
+        padding-left: 5px;
+    } 
+

@@ -1,0 +1,258 @@
+*  {
+    box-sizing: border-box; /*le rembourage et la bordure sont inclus ds la largeur et la hauteur totale des Ã©lÃ©ments*/
+    
+}
+
+/* For mobile phones: */
+
+@media screen and (max-width:479px) {
+
+    .titre {
+        display: flex;
+        justify-content: center;
+        color: rgba(66,124,160,255);
+        font-size: 135%;
+        margin-bottom: 0%;
+        height: 13%;
+    }
+
+    .picture{
+        display: flex;
+        justify-content: center;
+    }
+
+    .image{
+        width: 50%;
+        
+    }
+
+    .conteneurpicform {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .conteneurform {
+        background-color: rgba(66,124,160,255);
+        margin-bottom: 30px;
+        
+    }
+
+    .titreform {
+        color:rgba(245,245,220,255);
+
+    }
+
+
+
+    .form-input {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        background-color: rgba(66,124,160,255);
+       
+    }
+
+    .form-input {
+        width: 90%;
+        margin: auto;
+    }
+
+    .endform {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stars {
+        color: rgba(245,245,220,255);
+    }
+    
+    .captchaValidate {
+    display: flex;
+    width: 100%;
+    }   
+
+    .envoyer {
+    width: 90%;
+    margin: auto;
+    }   
+
+    .conteneurmsg {
+    border: 2px solid black;
+    box-shadow: 2px 3px 21px 5px rgb(0 0 0 / 20%);
+    margin: 0 0 10px 0;
+}
+
+    
+}
+    
+
+
+
+/*.theMail
+    display: block;
+*/
+/*For tablette: 480 pixels et inférieure à 960 pixels*/
+@media screen and (min-width:480px) and (max-width:960px) {
+
+    .titre {
+        display: flex;
+        justify-content: center;
+        color: rgba(66,124,160,255);
+        font-size: 135%;
+        margin-bottom: 0%;
+        height: 13%;
+    }
+
+    .picture{
+        display: flex;
+        justify-content: center;
+    }
+
+    .conteneurpicform {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .conteneurform {
+        background-color: rgba(66,124,160,255);
+        margin-bottom: 30px;
+        
+    }
+
+    .titreform {
+        color:rgba(245,245,220,255);
+
+    }
+
+
+
+    .form-input {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+        background-color: rgba(66,124,160,255);
+       
+    }
+
+    .form-input {
+        width: 95%;
+        margin: auto;
+    }
+
+    .endform {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stars {
+        color: rgba(245,245,220,255);
+    }
+    
+    .captchaValidate {
+    display: flex;
+    width: 100%;
+    }
+    
+    .envoyer {
+    width: 90%;
+    margin: auto;
+    }
+
+    .conteneurmsg {
+        border: 2px solid black;
+        box-shadow: 2px 3px 21px 5px rgb(0 0 0 / 20%);
+        margin: 0 0 10px 0;
+        width: 90%;
+        
+    }
+   
+}
+
+
+/*For destop*/
+@media screen and (min-width:960px) {
+.titre {
+    display: flex;
+    justify-content: center;
+    color: rgba(66,124,160,255);
+    font-size: 135%;
+    margin-bottom: 0%;
+    height: 13%;
+}
+
+.picture{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.conteneurpicform {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.conteneurform {
+    background-color: rgba(66,124,160,255);
+    margin-bottom: 30px;
+
+}
+
+.titreform {
+    color:rgba(245,245,220,255);
+
+}
+
+
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    background-color: rgba(66,124,160,255);
+   
+}
+
+
+.endform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35% ;
+}
+
+
+.stars {
+    color: rgba(245,245,220,255);
+}
+
+.captchaValidate {
+display: flex;
+width: 100%;
+}   
+
+.envoyer {
+width: 90%;
+margin: auto;
+}   
+
+.conteneurmsg {
+border: 2px solid black;
+box-shadow: 2px 3px 21px 5px rgb(0 0 0 / 20%);
+margin: 0 0 10px 0;
+width: 90%;
+
+}
+
+}
+
+
+
+
+
