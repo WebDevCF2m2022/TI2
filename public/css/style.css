@@ -18,7 +18,7 @@ h1 {
     max-width: 65%;
 }
 
-h4{
+.affiche {
     text-align: center;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
@@ -138,12 +138,24 @@ img {
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 420px) {
+@media screen and (min-width: 0px) and (max-width: 480px) {
     img {
         transition: 0.5s;
         width: 25vh;
         height: 25vh;
         max-width: 100%;
+    }
+
+    h2{
+        font-size:medium;
+    }
+
+    #affichval{
+        font-size: medium;
+    }
+
+    #afficherr{
+        font-size: medium;
     }
 }
 
@@ -178,5 +190,13 @@ img {
 }
 
 @media screen and (min-width: 960px) {
+    img{
+        float: left;
+        position: absolute;
+    }
 
+    #formulaire {
+        margin-top: 50px;
+        margin-left: 32%;
+    }
 }

@@ -1,6 +1,6 @@
 <?php
 # débugogage de la variable POST
-// var_dump($_POST);   
+//var_dump($_POST);   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,15 +41,15 @@
     <h3>Messages précédents</h3>
     <?php
     # pas de mail
-    if(empty($mail)):
+    if(empty($nbMsg)):
     ?>
-    <h4>Pas encore d'adresses mail</h4>
+    <h4 class="affiche">Pas encore d'adresses mail</h4>
     <?php
     # on a au moins un mail
     else:
         # affichage du nombre de mail
         ?>
-    <h4>Nous avons <?=$nbMsg?> adresse(s) inscrite</h4>
+    <h4 class="affiche">Nous avons <?=$nbMsg?> adresse(s) inscrite</h4>
     
         <?php
         # tant qu'on a des données

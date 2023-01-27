@@ -84,7 +84,7 @@ if(isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['me
 // Chargement de tout les champs requis pour la DB
 
 // Requête du MySQL
-$sqlRequest = "SELECT `firstname`, `lastname`, `usermail`, `message`, `datemessage` FROM `livreor` ORDER BY `message` DESC;";
+$sqlRequest = "SELECT `firstname`, `lastname`, `usermail`, `message`, `datemessage` FROM `livreor` ORDER BY `datemessage` DESC;";
 
 // exécution de la requête avec un try / catch
 try {
