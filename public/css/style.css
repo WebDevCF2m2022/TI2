@@ -67,13 +67,15 @@ label{
 
 p{
     text-align: center;
-    margin-top: 15px;
+    margin: 15px;
+
 }
 
 .text{
     border: 2px solid black;
         border-radius: 10px;
         margin-bottom: 10px;
+        padding: 0 25px;
 }
 
 .p1{
@@ -174,3 +176,5 @@ button:hover {
 h3{
     margin-top: 40px;
 }
+
+

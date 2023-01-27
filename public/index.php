@@ -26,12 +26,13 @@ if (isset($_POST['firstname'], $_POST['usermail'], $_POST['message'])) {
     $mess = htmlspecialchars(strip_tags(trim($_POST['message'])), ENT_QUOTES);
     # débugage des champs traités
     // var_dump($nom,$mail);
-
+        $nomnom =
+    htmlspecialchars(strip_tags(trim($_POST['lastname'])), ENT_QUOTES);
     # si les champs sont bons (ici vide, donc une seule erreur générale)
     if (!empty($nom) && !empty($mail)) {
 
         # insertion partie SQL
-        $sqlInsert = "INSERT INTO `livreor` (`firstname`,`usermail`,`message`) VALUES ('$nom','$mail', '$mess');";
+        $sqlInsert = "INSERT INTO `livreor` (`firstname`,`usermail`,`message`,`lastname`) VALUES ('$nom','$mail', '$mess', '$nomnom');";
 
         # requête avec try catch
         try {
@@ -65,7 +66,7 @@ if (isset($_POST['firstname'], $_POST['usermail'], $_POST['message'])) {
 # chargement de tous les mails
 
 // requête en variable texte contenant du MySQL
-$sqlMail = "SELECT `firstname`, `usermail`, `message`,`datemessage` FROM `livreor` ORDER BY `datemessage` DESC; ";
+$sqlMail = "SELECT `firstname`, `usermail`, `message`,`datemessage`,`lastname` FROM `livreor` ORDER BY `datemessage` DESC; ";
 
 // exécution de la requête avec un try / catch
 try {

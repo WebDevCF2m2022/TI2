@@ -70,13 +70,7 @@
                         <textarea id="msg" name="message" cols="60" rows="5" maxlength="600"></textarea>
                     </div>
                 </div>
-                <?php
-                if (empty($mess)) :
-                ?>
-                    <h3><?= $message1 ?></h3>
-                <?php
-                endif;
-                ?>
+             
                 <p class="p1">(*) ce champ est obligatoire</p>
                 <div class="row">
                     <div class="submit">
@@ -95,7 +89,7 @@
 
             <button id="captchaRefresh" type="button">Refresh</button>
         </div>
-        <h3>Les mails</h3>
+        <h3></h3>
         <?php
         # pas de mail
         if (empty($nbMail)) :
@@ -113,16 +107,20 @@
             ?>
                 <div class="text">
                     <h4><?= $item['firstname'] ?> à envoyé le message le <?= $item['datemessage'] ?></h4>
-                    <p><?= $item['message'] ?></p>
+                    <p class="p2"><?=$item['message']?></p>
+                    <?php
+                    if (empty($mess)) :
+                    ?>
+                        <h3><?= $message1 ?></h3>
+                    <?php
+                    endif;
+                    ?>
                 </div>
-
 
         <?php
             endforeach;
         endif;
         ?>
-
-
 
     </header>
 
