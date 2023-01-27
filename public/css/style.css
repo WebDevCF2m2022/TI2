@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+#header{
+    max-width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gainsboro;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px grey;
+    box-sizing: border-box;
+}
+.imag{
+    display: flex;
+}
+.imag img{
+    height: 200px;
+    width: auto;
+}
+.form{
+    width: 80%;
+    background-color: #74c0f0;
+    /*flex: 1;*/    display: inline-block;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+.form h2{
+    text-align: center;
+    color: white;
+}
+h1{
+    color :#74c0f0;
+    text-align: center;
+}
+button{
+    justify-items: center;
+}
+h4{
+    text-align: center;
+}
+.theMess{
+    display: block;
+    border: 2px solid black;
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    box-shadow:1px 3px #888888;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.form input{
+    display: flex;
+    align-content: center;
+    width: 80%;
+    margin-left: 100px;
+}
+.form textarea{
+     width: 80%;
+     height: 70px;
+     margin-left: 100px;
+}
+
+.form button{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+.form p{
+    font-weight: 500;
+    font-size: larger;
+    margin-left: 20px;
+}
+/*.champs {
+    color: white;
+    text-align: center;
+}*/
+ h4{
+    text-align: left;
+    font-weight: 500;
+    margin-left: 5px;
+}
+/*.messageUser{
+    margin-left: 5px;
+}*/
+@media (min-width:960px) {
+    .form {
+      width: 80%;
+    }
+}
+@media(min-width:370px){
+.form{
+    width: 80%;
+}
+}
