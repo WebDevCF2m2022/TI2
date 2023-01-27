@@ -1,0 +1,16 @@
+
+#captcha {
+	user-select: none;
+	background-color: black;
+	display: inline;
+	padding: 0.8em;
+	border-radius: 5px;
+}
+
+.validCaptcha{
+	border: 3px solid green;
+}
+
+.invalidCaptcha{
+	border: 3px solid red;
+}
