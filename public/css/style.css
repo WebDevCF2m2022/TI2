@@ -3,9 +3,8 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 */
 
-
 *{
-    box-sizing: border-box;  /*pour que quel que soit mon padding et/ou mon margin, les dimensins de mon width soit respectées et ne débordent pas - vu que le bord prend aussi une épaisseur, il sera alors compté vers l'intérieur*/
+    box-sizing: border-box;  /*pour que quel que soit mon padding et/ou mon margin, les dimensions de mon width soit respectées et ne débordent pas - vu que le bord prend aussi une épaisseur, il sera alors compté vers l'intérieur*/
 }
 html{
     font-family: 'Poppins', sans-serif;
@@ -13,11 +12,14 @@ html{
 h1{
     text-align: center;
 }
+h2{
+    text-align: center;
+}
 .agencement{
     display: grid;
     grid-template-columns: 1fr 3fr;  /*fr=fraction remember ^^ */
 }
-@media screen and (max-width:960px) /*and (min-width:481px)*/{ /*doit se passer quelle que soit la taille min - sini img reviens a cote*/
+@media screen and (max-width:960px) /*and (min-width:481px)*/{ /*doit se passer quelle que soit la taille min - sinon img revient à côté*/
     .agencement{
         grid-template-columns: auto;
     }
@@ -33,7 +35,11 @@ img{
     border: 2px solid black;
 }
 form{
-    max-width: 80ch;
+    max-width: 120ch;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: bisque;
+    padding: 2em;
 }
 .champs{
     display: flex;
@@ -60,4 +66,3 @@ form p{
 #bouton{
     margin: 0 auto;
 }
-

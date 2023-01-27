@@ -1,9 +1,7 @@
 <?php
 
-# chargement des constantes de connexion
 require_once "../config.php";
 
-# Essai de connexion
 try{
     # connexion mysqli
     $db = mysqli_connect(DB_HOST,DB_LOGIN,DB_PWD,DB_NAME,DB_PORT);
@@ -18,26 +16,27 @@ try{
 
 }
 
-# si il existe les variables POST = formulaire envoyé
+//adaptation faites à deux avec A-M
 if(isset($_POST['firstname'], $_POST['usermail'] )){
     # traitement des champs contre injection SQL (Sécurité!)
     $nom = htmlspecialchars(strip_tags(trim($_POST['lastname'])),ENT_QUOTES);
     $prenom = htmlspecialchars(strip_tags(trim($_POST['firstname'])),ENT_QUOTES);
-  
     $mail = htmlspecialchars(strip_tags(trim($_POST['usermail'])),ENT_QUOTES); // on pourrait vérifier si c'est un mail valide ( filter_var voir la fonction sur php.net)
     $msgUser = htmlspecialchars(strip_tags(trim($_POST['message'])),ENT_QUOTES);
     # débugage des champs traités
-    var_dump($prenom);
-    var_dump($nom);
-    var_dump($mail);
-    var_dump($msgUser);
-    # si les champs sont bons (ici vide, donc une seule erreur générale)
+  //  var_dump($prenom);
+  //  var_dump($nom);
+  //  var_dump($mail);
+  //  var_dump($msgUser);
+ 
+  # si les champs sont bons
     if(!empty($prenom)&&!empty($mail)){
         
         # insertion partie SQL
         $sqlInsert = "INSERT INTO `livreor` (`firstname`, `lastname`, `usermail`, `message`, `datemessage`) VALUES ('$prenom', '$nom', '$mail', '$msgUser', current_timestamp());";
-        var_dump($sqlInsert);
-        # requête avec try catch
+       // var_dump($sqlInsert);
+        
+       # requête avec try catch
         try{
             # requête
             mysqli_query($db,$sqlInsert);
@@ -46,8 +45,7 @@ if(isset($_POST['firstname'], $_POST['usermail'] )){
             $message ="Merci pour votre inscription";
 
         }catch(Exception $e){
-           # echo $e->getCode();
-
+           
            # avec le code erreur SQL on peut faire des erreurs différentes, idem avec le $e->getMessage() etc...
             if($e->getCode()==1406){
                 # création de l'erreur
@@ -59,11 +57,7 @@ if(isset($_POST['firstname'], $_POST['usermail'] )){
             }
             
         }
-
-
-    # sinon erreur
     }else{
-        # création de la variable $message
         $message = "Il y a eu un problème lors de votre inscription, veuillez réessayer";
     }
 

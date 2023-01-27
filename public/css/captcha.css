@@ -1,74 +1,54 @@
-* {	 box-sizing: border-box; }
+.card {
+	border:2px solid #000;
+	padding: 2em;
+	width: auto;
+	height: auto;
+	min-height:250px;
+	min-width: 300px;
+	margin: auto;
+	text-align: center;
+	background: #fff;
+	box-shadow: 0px 2px 16px rgba(0,0,0,0.2) ;
+}
+button {
+	margin: 1em 2px 0;
+	border-radius: 4px;
+	background: #fff;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	border: 1px solid #000;
+}
+#captcha{
+	user-select: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin: 1em auto;
+	padding: 1em;
+	border: 1px solid #0003;
+	text-align: center;
+}
+span {
+	display: inline-block;
+	font-size: 24px;
+	margin: 0 2px;
+}
 
-		html {
-			min-height: 100%;
-			display: flex;
-		}
-		body {
-			flex-grow: 1;
-			display: grid;
-			background: #f3f3f3;
-		}
+.spe-a, .spe-b, .spe-c, .spe-q, .spe-z { color: #5c23ce; }
+.spe-d, .spe-e, .spe-f, .spe-1, .spe-2 { color: #0f810f; }
+.spe-g, .spe-h, .spe-i, .spe-3 { color: #173ea8; }
+.spe-j, .spe-k, .spe-m, .spe-7, .spe-8, .spe-9 { color: #f54040; } 
+.spe-n, .spe-o, .spe-p, .spe-r, .spe-s { color: #9900cc; }
+.spe-t, .spe-u, .spe-v, .spe-4, .spe-5, .spe-6  { color: #0099cc; }
+.spe-w, .spe-x, .spe-y { color: #cc0099; }
 
-		.card {
-			border:2px solid #000;
-			padding: 2em;
-			width: auto;
-			height: auto;
-			min-height:250px;
-			min-width: 300px;
-			margin: auto;
-			text-align: center;
-			background: #fff;
-			box-shadow: 0px 2px 16px rgba(0,0,0,0.2) ;
-		}
-		button {
-			margin: 1em 2px 0;
-			border-radius: 4px;
-			background: #fff;
-			padding: 0.5em 1em;
-			cursor: pointer;
-			border: 1px solid #000;
-		}
-		#captcha{
-			user-select: none;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			width: 100%;
-			margin: 1em auto;
-			padding: 1em;
-			border: 1px solid #0003;
-			text-align: center;
-		}
-		span {
-			display: inline-block;
-			font-size: 24px;
-			margin: 0 2px;
-		}
+.spe-a, .spe-d, .spe-g { font-weight: bold; }
+.spe-j, .spe-m, .spe-p { font-family: sans-serif; }
+.spe-s, .spe-v, .spe-y { font-size: 2.1em; }
+.spe-1, .spe-4, .spe-7 { font-size: 2.9em; }
+.spe-b, .spe-e, .spe-h { font-weight: bold;}
 
-		.spe-a, .spe-b, .spe-c { color: #330099; }
-		.spe-d, .spe-e, .spe-f { color: #009900; }
-		.spe-g, .spe-h, .spe-i { color: #003399; }
-		.spe-j, .spe-k { color: #993300; }
-		.spe-m, .spe-n, .spe-o { color: #9900cc; }
-		.spe-p, .spe-q, .spe-r { color: #cc9900; }
-		.spe-s, .spe-t, .spe-u { color: #0099cc; }
-		.spe-v, .spe-w, .spe-x { color: #cc0099; }
-		.spe-y, .spe-z { color: #339900; }
-		.spe-1, .spe-2, .spe-3 { color: #993399; }
-		.spe-4, .spe-5, .spe-6 { color: #000000; }
-		.spe-7, .spe-8, .spe-9 { color: #990033; }
-
-		.spe-a, .spe-d, .spe-g { font-weight: bold; }
-		.spe-j, .spe-m, .spe-p { font-family: sans-serif; }
-		.spe-s, .spe-v, .spe-y { font-size: 2.1em; }
-		.spe-1, .spe-4, .spe-7 { font-size: 2.9em; }
-		.spe-b, .spe-e, .spe-h { letter-spacing: 0.5em; }
-		.spe-k, .spe-n, .spe-q { transform: rotate(10deg); }
-		.spe-t, .spe-w, .spe-z { transform: rotate(-10deg); }
-		.sep-2, .spe-5, .spe-8 { transform: translateY(5px); }
-		.sep-c, .spe-f, .spe-i { transform: translateY(-5px); }
-		.spe-o, .spe-r { font-family: cursive; } 
-		.spe-u, .spe-x { font-family: monospace; }
-		.spe-3, .spe-6, .spe-9 { font-family: fantasy; }
+.spe-o, .spe-r { font-family: cursive; } 
+.spe-u, .spe-x { font-family: monospace; }
+.spe-3, .spe-6, .spe-9 { font-family: fantasy; }
