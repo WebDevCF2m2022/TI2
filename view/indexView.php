@@ -18,6 +18,8 @@
     <img src="../img/email.png" alt="">
     <div id="formulaire"><br>
     <h2>Laissez nous un message</h2>
+    <div id="affichval"><?=$afficheVal?></div>
+    <div id="afficherr"><?=$afficheErr?></div>
         <form id='monFormulaire' name='lemail' action='' method="POST">
             <p>Prénom</p>
             <input type="text" name="firstname" placeholder="Prénom"><br>
@@ -29,8 +31,6 @@
             <textarea type="text" name="message" placeholder="Écrivez votre message ici" required></textarea>
             <h6>(*) Ce champ est obligatoire</h6>
             <button id="captchaValidate" type="button">Envoyer</button><br><br>
-            <div id="messageSend" style="display: none; color: blue; font-weight: bolder; font-size: 50px; text-align: center;">
-            Formulaire envoyé avec succès</div>
         </form>
         </div>
         <div id="blockcaptcha">
@@ -39,6 +39,17 @@
 			<button id="captchaRefresh" type="button">Refresh</button>
 		</div>
     <h3>Messages précédents</h3>
+    <?php
+    # pas de mail
+    if(empty($mail)):
+    ?>
+    <h4>Pas encore d'adresses mail</h4>
+    <?php
+    # on a au moins un mail
+    else:
+        # affichage du nombre de mail
+        ?>
+    <h4>Nous avons <?=$nbMsg?> adresse(s) inscrite</h4>
     
         <?php
         # tant qu'on a des données
@@ -46,16 +57,17 @@
         ?>
 <div id='affiche'>
         <h4>Nom</h4>
-            <span><?=$item['lastname']?></span>
+            <span class="donnee"><?=$item['lastname']?></span>
         <h4>Pénom (optionnel)</h4>
-            <span><?=$item['firstname']?></span>
+            <span class="donnee"><?=$item['firstname']?></span>
         <h4>Date</h4>
-            <span><?=$item['datemessage']?></span>
+            <span class="donnee"><?=$item['datemessage']?></span>
         <h4>Message</h4>
-            <span><?=$item['message']?></span>
+            <span class="donnee"><?=$item['message']?></span>
 </div>
 <?php
     endforeach;
+endif;
 ?>
 </body>
 </html>

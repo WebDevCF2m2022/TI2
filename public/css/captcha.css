@@ -1,7 +1,5 @@
 #captcha {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none;
+    
     display: flex;
     justify-content: center;
     margin-left: 5%;
