@@ -1,0 +1,247 @@
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    
+.titre{
+    text-align: center;
+    color: rgb(2, 168, 251);
+}
+
+.form{
+    background-color:rgb(2, 168, 251);
+}
+
+.laisser{
+    text-align: center;
+    color: aliceblue;
+}
+
+.ce{
+    text-align: center;
+    color: aliceblue;
+}
+
+#captchaValidate{
+    position: relative;
+    left: 25px;
+   width: 305px;
+   top: -10px;
+}
+
+.nom{
+    width: 300px;
+    position: relative;
+    left: 25px;
+}
+
+.pre{
+    width: 300px;
+    position: relative;
+    left: 25px;
+}
+.pre2{
+    position: relative;
+    left: 25px;
+}
+
+.pre1{
+    left: 25px;
+    position: relative;
+    width: 300px;
+}
+
+
+.mail{
+    width: 300px;
+    position: relative;
+    left: 25px;
+}
+
+.mess{
+    width: 300px;
+    position: relative;
+    left: 25px;
+}
+
+.pre{
+    position: relative;
+    left: 25px;
+}
+
+.tous{
+    background-color: antiquewhite;
+    text-align: center;
+    position: relative;
+    margin-left: 80px;
+    width: 200px;
+    
+}
+
+.img{
+    width: 150px;
+    position: relative;
+    left: 100px;
+}
+.envo{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+
+
+  }
+
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .titre{
+        text-align: center;
+        color: rgb(2, 168, 251);
+    }
+    
+.img{
+    width: 200px;
+    position: relative;
+    left: 300px;
+}
+.form{
+    background-color:rgb(230, 20, 55);
+    margin: 0 40px;
+   width: 800px;
+}
+.laisser{
+    text-align: center;
+    color: aliceblue;
+}
+.pre{
+    position: relative;
+    left: 15px;
+    
+}
+
+.nom{
+    width: 550px;
+    position: relative;
+    left: 105px;
+    top: -18px;
+}
+.pre1{
+    width: 550px;
+    position: relative;
+    left: 105px;
+    top: -18px;
+}
+
+.pre2{
+    width: 550px;
+    position: relative;
+    left: 15px;
+    top: 58px;
+}
+
+.mail{
+     width: 550px;
+    position: relative;
+    left: 105px;
+    top: -18px;
+}
+.mess{
+    width: 550px;
+    position: relative;
+    left: 105px;
+    top: -18px;
+}
+
+.ce{
+    text-align: center;
+    color: aliceblue;
+    font-size: 15px;
+    top: 10px;
+}
+  
+#captchaValidate{
+    position: relative;
+    left: 310px;
+   width: 185px;
+   top: -10px;
+}
+.tous{
+    background-color: antiquewhite;
+    text-align: center;
+    position: relative;
+    margin-left: 310px;
+    width: 185px;
+    
+}
+
+.envo{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px black;
+    margin: 20px;
+}
+
+
+  }
+
+   
+    @media only screen and (min-width: 900px) {
+        .titre {
+            text-align: center;
+            color: rgb(2, 168, 251);
+        
+        }
+        .img{
+            width: 300px;
+            position: relative;
+            left: 200px;
+            top: 70px;
+        }
+        .form{
+            background-color:rgb(230, 20, 55);
+           width: 800px;
+           position: relative;
+           left: 460px;
+           top: -250px;
+        }
+        .nom{
+            width: 650px;
+            position: relative;
+           
+        }
+        .pre1{
+            width: 650px;
+            position: relative;
+        }
+        .mess{
+            width: 650px;
+            position: relative;
+        }
+        .mail{
+            width: 650px;
+            position: relative;
+        }
+        .tous{
+            background-color: antiquewhite;
+            text-align: center;
+            position: relative;
+            left: 360px;
+            width: 185px;
+            top: -250px;
+            
+        }
+        .envo{
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 5px black;
+            margin: 20px;
+        }
+      } 
+
