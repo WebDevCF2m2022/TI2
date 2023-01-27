@@ -57,7 +57,7 @@ if(isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['me
 }
 # chargement de tous les mails
 // requête en variable texte contenant du MySQL
-$sqlRequest = "SELECT `firstname`, `lastname`, `usermail`, `message`,`datemessage` FROM `livreor` ORDER BY `message`;";
+$sqlRequest = "SELECT `firstname`, `lastname`, `usermail`, `message`,`datemessage` FROM `livreor` ORDER BY `datemessage` DESC;";
 // exécution de la requête avec un try / catch
 try {
     $queryMessage = mysqli_query($db, $sqlRequest);
@@ -65,6 +65,7 @@ try {
     # arrêter le script et afficher l'erreur (de type SQL)
     exit(utf8_encode($e->getMessage()));
 }
+$nbMails = mysqli_num_rows($queryMessage);
 
 # on convertit les mails récupérés en tableaux associatifs intégrés dans un tableau indexé
 $messageUser = mysqli_fetch_all($queryMessage,MYSQLI_ASSOC);

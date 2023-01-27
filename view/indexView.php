@@ -71,7 +71,7 @@
     
     <?php
     # pas de mail
-    if(empty($queryMessage)):
+    if(empty($nbMails)):
     ?>
     <h4>Pas encore de message</h4>
     <?php
@@ -79,12 +79,10 @@
     else:
         # affichage du nombre de mail
         ?>
+        <h4>Nous avons <?=$nbMails?> mails enregistrer</h4>
 
 <h2>Message précédents</h2>
-        <?php
-        # tant qu'on a des mail
-        foreach($messageUser as $item):
-        ?>
+
 <?php
 foreach($messageUser as $item):
         ?>
@@ -101,7 +99,7 @@ foreach($messageUser as $item):
 
         <?php
         endforeach;
-    endforeach;
+   
     endif;
     ?>
 </body>
