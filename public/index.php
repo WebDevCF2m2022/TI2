@@ -12,30 +12,27 @@ try{
     exit(utf8_encode($e->getMessage()));
 
 }
-
+// conditions si les superglobals post existe bien et on les stocks chacunes dans des variables propre a eux 
 if(isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['message'] )){
     $prenom = htmlspecialchars(strip_tags(trim($_POST['firstname'])),ENT_QUOTES);
     $nom = htmlspecialchars(strip_tags(trim($_POST['lastname'])),ENT_QUOTES);
     $mail = htmlspecialchars(strip_tags(trim($_POST['usermail'])),ENT_QUOTES);
     $textmessage = htmlspecialchars(strip_tags(trim($_POST['message'])),ENT_QUOTES);
     
-    # débugage des champs traités
-    // var_dump($nom,$mail);
 
-    # si les champs sont bons (ici vide, donc une seule erreur générale)
+    #  condition si (verification des variable si elles sont vides ou pas)
     if(!empty($prenom)&&!empty($mail)&&!empty($textmessage)){
         
         # insertion partie SQL
         $sqlInsert = "INSERT INTO `livreor` (`firstname`,`lastname`,`usermail`, `message`) VALUES ('$prenom','$nom','$mail','$textmessage');";
-        header("Location: ./");
 
-        # requête avec try catch
+        # requête try catch
         try{
             # requête
             mysqli_query($db,$sqlInsert);
             
-            # si pas d'erreur création du texte
-            $message ="Merci pour votre inscription";
+            # message d'inscription
+            $message ="Votre message a bien été envoyé";
 
         }catch(Exception $e){
             
@@ -43,9 +40,9 @@ if(isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['me
         }
 
 
-    # sinon erreur
+    # sinon
     }else{
-        # création de la variable $message
+        # variable $message
         $message = "Il y a eu un problème lors de votre inscription, veuillez réessayer";
     }
 
@@ -54,10 +51,10 @@ else {$message = "";
 }
 
 
-# chargement de tous les mails
+# chargement de tous les messages
 
 // requête en variable texte contenant du MySQL
-$sqlMessage = "SELECT `firstname`, `lastname`, `usermail`, `message`FROM `livreor` ORDER BY `datemessage` DESC; ";
+$sqlMessage = "SELECT `firstname`, `lastname`, `usermail`, `message` , `datemessage` FROM `livreor` ORDER BY `datemessage` DESC; ";
 
 // exécution de la requête avec un try / catch
 try {
@@ -67,11 +64,11 @@ try {
     exit(utf8_encode($e->getMessage()));
 }
 
-# on compte le nombre de mails récupérés
-$nbMail = mysqli_num_rows($queryMessage);
+# on compte le nombre de messages récupérés
+$nbMessage = mysqli_num_rows($queryMessage);
 
 
-# on convertit les mails récupérés en tableaux associatifs intégrés dans un tableau indexé
+# on convertit les messages récupérés en tableaux associatifs intégrés dans un tableau indexé
 $responseMessage = mysqli_fetch_all($queryMessage,MYSQLI_ASSOC);
 
 mysqli_free_result($queryMessage);
