@@ -1,0 +1,26 @@
+#captcha {
+	/**-webkit-user-select: none; /* Safari */
+	/*-ms-user-select: none; /* IE 10+ */
+	/*user-select: none;*/
+
+	background-color: rgb(17, 9, 9);
+	display: inline;
+	padding: 0.8em;
+	border-radius: 5px;
+}
+
+.capBody {
+	background-color: cornsilk;
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	margin: 50px auto;
+	border: 2px solid black;
+	border-radius: 3px;
+	
+}
+
+#captchaInput {
+	margin-top: 20px;
+}
+

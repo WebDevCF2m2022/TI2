@@ -1,0 +1,129 @@
+body {
+    width: 1360px;
+    margin: auto;
+    background-color:#e6fde9;
+}
+
+h1 {
+    text-align: center;
+    color:#83141a;
+    text-shadow: 1px 1px 2px black;
+}
+
+.formulaire {
+    height: 700px;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+form {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formInt {
+    font-size: 20px;
+    background-color:rgba(253,251,230,255);
+    padding: 10px;
+    height: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #2e0709;
+    
+    
+}
+
+.labelMessage {
+    margin-top: 80px;
+}
+
+label {
+    margin-right: 30px;
+    display: inline-block;
+    width: 150px;
+    margin-top: 30px;
+    
+}
+
+h3 {
+    text-align: center;
+}
+
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid #83141a;
+    margin-right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.inputForm {
+    height: 20px;
+    width: 600px;
+}
+
+.inputFormMessage {
+    height: 100px;
+    width: 600px;
+}
+
+
+
+.affichageLog {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 10px;
+    background-color: #a8a799a6;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.boutonEnvoie {
+    margin-left: 40%;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+}
+
+.champObligatoire {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+
+@media screen and (min-width: 480px) and (max-width: 960px) {
+    
+    body {
+        max-width: 960px;
+        margin: auto;
+        background-color:#e6fde9;
+    }
+    
+    
+    
+    .formulaire {
+        height: 450px;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid #83141a;
+        margin-right: 5px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+}
