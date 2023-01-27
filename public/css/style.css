@@ -1,0 +1,198 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+	background-color: rgba(117, 235, 235, 0.39);
+}
+h1 {
+	text-align: center;
+	color: rgb(61, 104, 185);
+	font-size: 3rem;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h2 {
+	margin-bottom: 2rem;
+}
+
+/* style du formulaire */
+.form-container, .oui {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: auto;
+	background-color: rgb(61, 104, 185);
+}
+
+.oui {
+	width: 100%;
+}
+
+form h2 {
+	text-align: center;
+	color: white;
+	padding-top: 1.5rem;
+}
+
+.logo {
+	width: 70%;
+	margin: auto;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.form-container {
+    margin-bottom: 2rem;
+}
+
+.form-container input, .form-container textarea, .form-container label {
+	width: 90%;
+	margin: auto;
+	height: 2rem;
+	font-weight: bold;
+}
+
+.form-container input, .form-container h2, textarea {
+	margin-bottom: 2rem;
+}
+.form-container textarea{
+    height: 15rem;
+}
+
+.form-container button {
+    margin: auto;
+	width: 90%;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cap {
+    display: block;
+	margin: auto;
+	width: 70%;
+    height: fit-content;
+	background-color: rgba(128, 128, 128, 0.39);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.cap button {
+    display: block;
+    width: 30%;
+    margin: auto;
+    position: relative;
+    top: 1rem;
+}
+
+.cap input {
+    display: block;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 0.5rem;
+}
+
+
+/* texte si captcha valide */
+#error {
+    font-size: 0;
+}
+.invalid p {
+	display: block;
+    position: relative;
+	top: 1rem;
+	left: 1rem;
+    font-size: 1rem;
+    color: red;
+}
+#confirm {
+	font-size: 0;
+}
+.valid p {
+	display: block;
+    position: relative;
+	top: 1rem;
+	left: 1rem;
+    font-size: 1rem;
+    color: green;
+}
+
+#captchaOutput {
+    margin: auto;
+	border-radius: 10px;
+	background-color: black;
+	text-align: center;
+	font-size: 2.5rem;
+	user-select: none;
+	   -webkit-user-select: none;
+	   -moz-user-select: none;
+}
+
+#casse {
+	font-weight: bold;
+	color: red;
+	margin: auto;
+	padding: 1rem;
+}
+
+.message-container{
+    width: 90%;
+    margin: auto;
+}
+
+.messages {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(124, 124, 124, 0.267);
+    border: solid 2px black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width : 481px) and (max-width : 960px) {
+	.logo {
+		width: 30%;
+		margin: auto;
+	}
+	.oui {
+		flex-direction: row;
+	}
+	.oui input, .oui textarea{
+		line-height: 8rem;
+		width: 300%;
+		margin-right: 2rem;
+	}
+	.oui label {
+		padding: 1rem;
+		margin-top: -1rem;
+	}
+}
+
+@media (min-width: 961px) {
+	h1 {
+		margin: 2rem 0;
+		padding: 1rem;
+	}
+	.gros{
+		display: grid;
+		grid-template-columns: 30% 1fr 5%;
+	}
+	.form-container {
+		width: 100%;
+		margin-right: 5rem;
+	}
+	.cap {
+		width: 25%;
+	}
+	.message-container {
+		width: 70%;
+	}
+}
