@@ -1,0 +1,150 @@
+
+#monFormulaire{
+    background-color:#427ca0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+}
+
+h1{
+    text-align: center;
+    color:#427ca0;
+}
+h2{
+    font-size: 19px;
+    color:#f5f5dc;
+}
+
+img{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#lab {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+label{
+    font-size: 20px;
+}
+label,input, textarea{
+    margin-left: 15px;
+}
+
+textarea, input, .btn{
+    width: 320px;
+    margin-bottom: 10px;
+    background-color:#f5f5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+input, .btn, #captchaInput{
+    height: 30px;
+}
+
+#captchaInput{
+    background-color: white;
+    width: auto;
+
+}
+
+.captcha{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+.txt{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 0 auto;
+    height: auto;
+}
+.lesmessages{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#auteur{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+@media screen and (min-width: 480px) {
+    #lab{
+        float: left;
+        position: absolute;
+        left: 35px;
+    }
+    .unput{
+        position: relative;
+        left: 20%;
+        width:450px;
+    }
+    .btn{
+        width: 150px;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+
+    img{
+        float: left;
+        width: 350px;
+    }
+
+    #monFormulaire{
+        position: relative;
+        background-color:#427ca0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 20px;
+        width: 900px;
+        left: 8%;
+    }
+
+    #lab{
+        float: left;
+        position: absolute;
+        left: 5px;
+    }
+    
+    .unput{
+        position: relative;
+        left: 43px;
+        width:750px;
+    }
+
+
+}
