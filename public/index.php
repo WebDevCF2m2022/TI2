@@ -25,7 +25,7 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['m
 
 
     # si les champs sont bons (ici vide, donc une seule erreur générale)
-    if (!empty($firstname)&&filter_var($usermail,FILTER_VALIDATE_EMAIL)&&!empty($message)) {
+    if (!empty($firstname) && filter_var($usermail,FILTER_VALIDATE_EMAIL) && !empty($message)) {
 
         # insertion partie SQL
         $sqlInsert = "INSERT INTO `livreor` (`firstname`,`lastname`, `usermail`, `message`) VALUES ('$firstname','$lastname', '$usermail', '$message');";
@@ -38,8 +38,6 @@ if (isset($_POST['firstname'], $_POST['lastname'], $_POST['usermail'], $_POST['m
             if($e->getCode()==1406){
                 # création de l'erreur
                 $messageRetour = "Un champs est trop long";              
-            }else{
-                $messageRetour = "il y a un problème! rééssayez!";
             }
         }
     }else{

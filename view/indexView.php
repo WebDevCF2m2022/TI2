@@ -11,43 +11,60 @@
 
 <body>
     <h1>Livre D'or</h1>
+    <div class="gros">
+        <!-- formulaire utilisateur -->
+        <div class="logo">
+            <img src="img/email.png">
+        </div>
 
-    <!-- formulaire utilisateur -->
-    <div class="logo">
-        <img src="img/email.png">
+        <!-- formulaire -->
+        <form action="" method="post">
+            <div class="form-container">
+                <h2>Laissez-nous un message : </h2>
+
+                <div class="oui">
+                    <label for="firstname">Prénom *</label>
+                    <input type="text" name="firstname" id="firstname">
+                </div>
+
+                <div class="oui">
+                    <label for="lastname">Nom</label>
+                    <input type="text" name="lastname" id="lastname">
+                </div>
+
+                <div class="oui">
+                    <label for="usermail">E-mail *</label>
+                    <input type="email" name="usermail" id="usermail">
+                </div>
+
+                <div class="oui">
+                    <label for="message">Message *</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+
+                <!-- mettre en type="button" hein -->
+                <button id="captchaValidate" type="button">Envoyer</button>
+
+                <?php
+                if (isset($messageRetour)) : ?>
+                    <p id="casse"><?= $messageRetour ?></p>
+                <?php
+                endif;
+                ?>
+
+            </div>
     </div>
-
-    <!-- formulaire -->
-    <form action="" method="post">
-        <div class="form-container">
-            <?php
-            if (isset($messageRetour)) : ?>
-                <p><?= $messageRetour ?></p>
-            <?php
-            endif;
-            ?>
-            <h2>Laissez-nous un message : </h2>
-            <label for="firstname">Prénom *</label><input type="text" name="firstname" id="firstname">
-            <label for="lastname">Nom</label><input type="text" name="lastname" id="lastname">
-            <label for="usermail">E-mail *</label><input type="email" name="usermail" id="usermail">
-            <label for="message">Message *</label><textarea name="message" id="message"></textarea>
-
-            <!-- mettre en type="button" hein -->
-            <button id="captchaValidate" type="button">Envoyer</button>
-        </div>
-
-        <div class="cap">
-            <p id="captchaOutput"></p>
-            <button id="refresh" type="button">Rafraichir</button><br>
-            <input id="captchaInput" placeholder="faites le captcha" type="text" />
-            <span id="confirm">
-                <p>Votre message est envoyé!</p>
-            </span>
-            <span id="error">
-                <p>Captach invalide!!</p>
-            </span>
-        </div>
-
+    <div class="cap">
+        <p id="captchaOutput"></p>
+        <button id="refresh" type="button">Rafraichir</button><br>
+        <input id="captchaInput" placeholder="faites le captcha" type="text" />
+        <span id="confirm">
+            <p>Le captcha est valide!</p>
+        </span>
+        <span id="error">
+            <p>Captach invalide!!</p>
+        </span>
+    </div>
     </form>
 
     <div class="message-container">
@@ -63,7 +80,6 @@
                 <div class="messages">
                     <h4><?= $item['firstname'] . " " . $item['lastname'] . " a envoyé ce message le " . $item['datemessage']; ?></h4>
                     <p><?= "Message : " . $item['message']; ?></p>
-
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>

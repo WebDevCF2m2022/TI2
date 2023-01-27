@@ -17,12 +17,16 @@ h1 {
 
 
 /* style du formulaire */
-.form-container {
+.form-container, .oui {
 	display: flex;
 	flex-direction: column;
 	width: 90%;
 	margin: auto;
 	background-color: rgb(61, 104, 185);
+}
+
+.oui {
+	width: 100%;
 }
 
 form h2 {
@@ -95,6 +99,12 @@ form h2 {
     top: 0.5rem;
 }
 
+#casse {
+	font-weight: bold;
+	color: red;
+	margin: auto;
+}
+
 /* boder input si le cap est valid ou non */
 .capValid input{
 	border: green solid 3px;
@@ -150,3 +160,43 @@ form h2 {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
+@media (min-width : 481px) and (max-width : 960px) {
+	.logo {
+		width: 30%;
+		margin: auto;
+	}
+	.oui {
+		flex-direction: row;
+	}
+	.oui input, .oui textarea{
+		line-height: 8rem;
+		width: 300%;
+		margin-right: 2rem;
+	}
+	.oui label {
+		padding: 1rem;
+		margin-top: -1rem;
+	}
+}
+
+@media (min-width: 961px) {
+	h1 {
+		margin: 2rem 0;
+		padding: 1rem;
+	}
+	.gros{
+		display: grid;
+		grid-template-columns: 30% 1fr 5%;
+	}
+	.form-container {
+		width: 100%;
+		margin-right: 5rem;
+	}
+	.cap {
+		width: 20%;
+	}
+	.message-container {
+		width: 70%;
+	}
+
+}
