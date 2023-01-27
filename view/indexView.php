@@ -59,7 +59,7 @@
                 <?php
                    #si on a un message 
                      if(isset($message)):
-                     #on l'afficher
+                     #on l'afficher notre message 
                      ?>
                      <h4 class="txtErr"><?=$message?></h4>
                      <?php
