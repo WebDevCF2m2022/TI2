@@ -100,13 +100,6 @@ form h2 {
     top: 0.5rem;
 }
 
-/* boder input si le cap est valid ou non */
-.capValid input{
-	border: green solid 3px;
-}
-.capInalid input{
-	border: red solid 3px;
-}
 
 /* texte si captcha valide */
 #error {
