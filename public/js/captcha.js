@@ -1,6 +1,7 @@
 /* Fonction qui génère un captcha qui sera inséré dans un élément avec l'id "captcha"
 			et qui nécessite un callback qui sera appellé lorsqu'le captcha	est validé ainsi qu'une
 			longueur de captcha pour la génération */
+		
 			function captchaCF2M(callback, captchaLen) {
 				function randomInt(min, max) {
 					return Math.floor(Math.random() * (max - min + 1) + min)
@@ -55,10 +56,10 @@
 				}
 
 				function randomSize() {
-					return randomInt(10, 18) / 10
+					return randomInt(20, 30) / 10
 				}
 			
-				const allCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+				const allCharacters = ['A', 'B','D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N','P', 'Q', 'R', 'S', 'T', 'U','Y','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k','m', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','1', '2', '3', '4', '5', '6', '7', '8', '9'];
 				const captcha = document.querySelector('#captcha');
 				const captchaInput = document.querySelector('#captchaInput');
 				const captchaValidate = document.querySelector('#captchaValidate');

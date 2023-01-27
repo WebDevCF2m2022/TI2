@@ -8,3 +8,14 @@
 	padding: 0.8em;
 	border-radius: 1px;
 }
+
+.invalidCaptcha + span::after{
+	content: " Captcha invalide";
+	color: red;
+}
+
+
+.validCaptcha + span::after{
+	content: " Captcha valide";
+	color: green;
+}

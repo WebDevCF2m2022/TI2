@@ -8,6 +8,7 @@
 
 .form{
     background-color:rgb(2, 168, 251);
+    
 }
 
 .laisser{
@@ -79,8 +80,8 @@
 .img{
     width: 150px;
     position: relative;
-    left: 100px;
-}
+    left: 180px;
+}   
 .envo{
     border: 2px solid black;
     border-radius: 20px;
@@ -108,7 +109,7 @@
     left: 300px;
 }
 .form{
-    background-color:rgb(230, 20, 55);
+    background-color:rgb(2, 168, 251);
     margin: 0 40px;
    width: 800px;
 }
@@ -173,7 +174,7 @@
     text-align: center;
     position: relative;
     margin-left: 310px;
-    width: 185px;
+    width: 200px;
     
 }
 
@@ -203,7 +204,7 @@
             top: 70px;
         }
         .form{
-            background-color:rgb(230, 20, 55);
+            background-color:rgb(2, 168, 251);
            width: 800px;
            position: relative;
            left: 460px;
@@ -231,7 +232,7 @@
             text-align: center;
             position: relative;
             left: 360px;
-            width: 185px;
+            width: 250px;
             top: -250px;
             
         }

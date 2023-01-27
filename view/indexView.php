@@ -68,7 +68,7 @@
         
         foreach($responseMail as $item):
         ?>
-<div class='envo'><?=$item['firstname']?> <?=$item['message']?></div>
+<div class='envo'><?=$item['firstname']?>   Le   <?=$item['datemessage']?><br><?=$item['message']?></div>
         <?php
         endforeach;
     endif;
