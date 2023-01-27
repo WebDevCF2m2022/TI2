@@ -1,0 +1,41 @@
+
+
+/* boder input si le cap est valid ou non */
+.capValid input{
+	border: green solid 3px;
+}
+.capInalid input{
+	border: red solid 3px;
+}
+
+/* texte si captcha valide */
+#error {
+    font-size: 0;
+}
+.invalid p {
+	display: block;
+    position: relative;
+	top: 1rem;
+	left: 1rem;
+    font-size: 1rem;
+    color: red;
+}
+#confirm {
+	font-size: 0;
+}
+.valid p {
+	display: block;
+    position: relative;
+	top: 1rem;
+	left: 1rem;
+    font-size: 1rem;
+    color: green;
+}
+
+#captchaOutput {
+    margin: auto;
+	border-radius: 10px;
+	background-color: black;
+	text-align: center;
+	font-size: 2.5rem;
+}

@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livre D'or de Jon</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/captcha">
 </head>
 
 <body>
     <h1>Livre D'or</h1>
     <div class="gros">
-        <!-- formulaire utilisateur -->
+        <!-- logo -->
         <div class="logo">
             <img src="img/email.png">
         </div>
@@ -54,6 +55,7 @@
 
             </div>
     </div>
+    <!-- le captcha il va là -->
     <div class="cap">
         <p id="captchaOutput"></p>
         <button id="refresh" type="button">Rafraichir</button><br>
@@ -67,25 +69,30 @@
     </div>
     </form>
 
+    <!-- affichage des messages -->
     <div class="message-container">
         <h2>Messages précédents : </h2>
         <?php
-        // on vérifie si y'a des messages dans le LO et on affiche combien y'en a si y'en a :
 
+        // on vérifie si y'a des messages dans le LO  :
         if (empty($nbLO)) : ?>
-            <?= "il y a pas de messages ici"; ?>
-            <?php else :
+            <div class="messages">
+                <?= "il y a pas de messages ici"; ?>
+            </div>
 
+            <!-- affichage des message des la DB -->
+            <?php else :
             foreach ($resultLO as $item) : ?>
                 <div class="messages">
-                    <h4><?= $item['firstname'] . " " . $item['lastname'] . " a envoyé ce message le " . $item['datemessage']; ?></h4>
+                    <a href="mailto:<?= $item['usermail'] ?>"><?= $item['firstname'] . " " . $item['lastname'] ?></a>
+                    <h4><?= "a envoyé ce message le " . date("Y-m-d\ à \ H:i:s", strtotime($item['datemessage'])); ?></h4>
                     <p><?= "Message : " . $item['message']; ?></p>
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
 
-        <!-- affichage des éléments des la DB -->
     </div>
+    <div style="margin-bottom: 2rem;"></div>
     <script src="js\captcha.js"></script>
 
 </body>

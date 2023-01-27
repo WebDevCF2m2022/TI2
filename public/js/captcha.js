@@ -29,7 +29,7 @@ function capTI(callback, min = 6, max = 6) {
 			);
 		}
 	}
-
+	
 	
 	function validateCaptcha() {
 		if (capOut.textContent == capIn.value) {
@@ -37,16 +37,17 @@ function capTI(callback, min = 6, max = 6) {
 				capIn.style.border = "3px solid green"
 				error.classList.remove("invalid");
 				confirm.classList.add("valid");
-				setTimeout (callback, 3000);
+				setTimeout(callback, 2000);
 			}else{
 				capIn.style.border = "3px solid green"
 				confirm.classList.add("valid");
-				setTimeout (callback, 3000);
+				setTimeout(callback, 2000);
 			}
 		} else {
 			generateCaptcha();
-			capIn.style.border = "3px solid red"
 			error.classList.add("invalid");
+			capIn.style.border = "3px solid red"
+		
 		}
 	}
 	
@@ -80,8 +81,9 @@ function capTI(callback, min = 6, max = 6) {
 	let capIn = document.querySelector("#captchaInput");
 	let capValid = document.querySelector("#captchaValidate");
 	let refresh = document.querySelector("#refresh");
-	let error = document.querySelector('#error')
-	let confirm = document.querySelector('#confirm')
+	let error = document.querySelector('#error');
+	let confirm = document.querySelector('#confirm');
+	let casse = document.querySelector('#casse');
 	
 
 
@@ -93,8 +95,7 @@ function capTI(callback, min = 6, max = 6) {
 
 function soumission() {
 	document.querySelector('form').requestSubmit(); 
+	
 }
 
 capTI(soumission, 7, 7);
-
-
