@@ -38,7 +38,6 @@
 			<input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span></br></br>
 			<button id="captchaRefresh" type="button">Refresh</button>
 		</div>
-        <div id="blocmessage"></div>
     <h3>Messages précédents</h3>
     
         <?php
@@ -46,14 +45,14 @@
         foreach($finalArr as $item):
         ?>
 <div id='affiche'>
-        <h4>Nom:</h4>
-                <span><?=$item['lastname']?></span>
-        <h4>Pénom:</h4>
-                <span><?=$item['firstname']?></span>
-        <h4>Mail:</h4>
-                <span><?=$item['usermail']?></span>
-        <h4>Message:</h4>
-                <span><?=$item['message']?></span>
+        <h4>Nom</h4>
+            <span><?=$item['lastname']?></span>
+        <h4>Pénom (optionnel)</h4>
+            <span><?=$item['firstname']?></span>
+        <h4>Date</h4>
+            <span><?=$item['datemessage']?></span>
+        <h4>Message</h4>
+            <span><?=$item['message']?></span>
 </div>
 <?php
     endforeach;

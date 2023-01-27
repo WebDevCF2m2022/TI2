@@ -17,8 +17,19 @@ h1 {
     max-width: 65%;
 }
 
+h3 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+}
+
 h6 {
     color: white;
+}
+
+#monFormulaire{
+    display: block;
+    float: left;
 }
 
 #monFormulaire p {
@@ -81,23 +92,29 @@ img {
     margin: auto;
     border: 1px solid black;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     max-width: 95%;
 }
 
 /* Titre et date */
 #affiche h4{
-    margin-bottom: 10vh;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vh;
     max-width: 95%;
 }
 
 /* Les données SQL*/
 #affiche span{
+    margin-left: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vh;
+    margin-bottom: 20px;
     max-width: 95%;
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 300px) {
+@media screen and (min-width: 0px) and (max-width: 420px) {
     img {
         transition: 0.5s;
         width: 25vh;
@@ -107,5 +124,35 @@ img {
 }
 
 @media screen and (min-width: 480px) and (max-width: 960px) {
+    #monFormulaire{
+        display: inline-block;
+    }
+
+    #monFormulaire p{
+        
+        position: absolute;
+    }
+
+    #formulaire #monFormulaire input{
+        margin-bottom: 20px;
+        margin-top: 3%;
+        margin-left: 25%;
+        height: 3vh;
+        width: 70%;
+    }
+
+    #formulaire #monFormulaire textarea{
+        margin-bottom: 10px;
+        margin-top: 2%;
+        margin-left: 25%;
+        width: 70%;
+    }
+
+    #formulaire h2{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 960px) {
 
 }

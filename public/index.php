@@ -40,7 +40,7 @@ if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
     if(!empty($prenom)&&!empty($mail)&&!empty($message)){
         
         # insertion partie SQL
-        $sqlInsert = "INSERT INTO `livreor` (`firstname`, `lastname`, `usermail`, `message`) VALUES ('$prenom','$nom','$mail','$message');";
+        $sqlInsert = "INSERT INTO `livreor` (`firstname`, `lastname`, `usermail`, `message`, `datemessage`) VALUES ('$prenom','$nom','$mail','$message, '$datemess');";
 
         # requête avec try catch
         try{
@@ -76,7 +76,7 @@ if (filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 // Chargement de tout les champs requis pour la DB
 
 // Requête du MySQL
-$sqlRequest = "SELECT `firstname`, `lastname`, `usermail`, `message` FROM `livreor` ORDER BY `message` DESC;";
+$sqlRequest = "SELECT `firstname`, `lastname`, `usermail`, `message`, `datemessage` FROM `livreor` ORDER BY `message` DESC;";
 
 // exécution de la requête avec un try / catch
 try {
