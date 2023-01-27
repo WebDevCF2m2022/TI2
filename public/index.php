@@ -19,20 +19,24 @@ try{
 }
 
 # si il existe les variables POST = formulaire envoyé
-if(isset($_POST['nomadresses'], $_POST['mailadresses'] )){
+if(isset($_POST['firstname'], $_POST['usermail'] )){
     # traitement des champs contre injection SQL (Sécurité!)
-    $nom = htmlspecialchars(strip_tags(trim($_POST['nomadresses'])),ENT_QUOTES);
-    $mail = htmlspecialchars(strip_tags(trim($_POST['mailadresses'])),ENT_QUOTES); // on pourrait vérifier si c'est un mail valide ( filter_var voir la fonction sur php.net)
-
+    $nom = htmlspecialchars(strip_tags(trim($_POST['lastname'])),ENT_QUOTES);
+    $prenom = htmlspecialchars(strip_tags(trim($_POST['firstname'])),ENT_QUOTES);
+  
+    $mail = htmlspecialchars(strip_tags(trim($_POST['usermail'])),ENT_QUOTES); // on pourrait vérifier si c'est un mail valide ( filter_var voir la fonction sur php.net)
+    $msgUser = htmlspecialchars(strip_tags(trim($_POST['message'])),ENT_QUOTES);
     # débugage des champs traités
-    // var_dump($nom,$mail);
-
+    var_dump($prenom);
+    var_dump($nom);
+    var_dump($mail);
+    var_dump($msgUser);
     # si les champs sont bons (ici vide, donc une seule erreur générale)
-    if(!empty($nom)&&!empty($mail)){
+    if(!empty($prenom)&&!empty($mail)){
         
         # insertion partie SQL
-        $sqlInsert = "INSERT INTO `adresses` (`nomadresses`,`mailadresses`) VALUES ('$nom','$mail');";
-
+        $sqlInsert = "INSERT INTO `livreor` (`firstname`, `lastname`, `usermail`, `message`, `datemessage`) VALUES ('$prenom', '$nom', '$mail', '$msgUser', current_timestamp());";
+        var_dump($sqlInsert);
         # requête avec try catch
         try{
             # requête
@@ -68,7 +72,7 @@ if(isset($_POST['nomadresses'], $_POST['mailadresses'] )){
 # chargement de tous les mails
 
 // requête en variable texte contenant du MySQL
-$sqlMail = "SELECT `nomadresses`, `mailadresses` FROM `adresses` ORDER BY `dateadresses` DESC; ";
+$sqlMail = "SELECT `firstname`, `usermail` FROM `livreor` ORDER BY `datemessage` DESC; ";
 
 // exécution de la requête avec un try / catch
 try {

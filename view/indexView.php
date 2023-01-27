@@ -1,53 +1,33 @@
 <?php
-
-# débugogage de la variable POST
-// var_dump($_POST);   
+var_dump($_POST)
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mail</title>
-    <link href='css/style.css' rel='stylesheet' />
+    <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mail</h1>
-    <h2>Formulaire</h2>
-    <?php
-    # si on a un message
-    if(isset($message)):
-        # on l'affiche
-    ?>
-    <h4><?=$message?></h4>
-    <?php
-    endif;
-    ?>
-        <form name='lemail' action='' method="POST">
-            <input type="text" name="nomadresses" placeholder="votre nom" required><br>
-            <input type='email' name="mailadresses" placeholder="votre mail" required><br>
-            <input type="submit" value="Envoyer">
-        </form>
-    <h3>Les mails</h3>
-    <?php
-    # pas de mail
-    if(empty($nbMail)):
-    ?>
-    <h4>Pas encore d'adresses</h4>
-    <?php
-    # on a au moins un mail
-    else:
-        # affichage du nombre de mail
-        ?>
-    <h4>Nous avons <?=$nbMail?> adresses inscrites</h4>
-        <?php
-        # tant qu'on a des mail
-        foreach($responseMail as $item):
-        ?>
-<div class='theMail'><?=$item['nomadresses']?> <?=$item['mailadresses']?></div>
-        <?php
-        endforeach;
-    endif;
-    ?>
+    <h1>Laissez-nous un message</h1>
+    <div class="agencement">
+        <img id="satisfaction" src="images/Satisfaction.jpg" alt="Donnez votre avis">
+        <section><!--formulaire-->
+            <form name='livret' action='' method="POST">
+                <div class="champs"><label for="nom">Nom*</label><input type="text" name="lastname" placeholder="Indiquez votre nom" required></div>
+                <div class="champs"><label for="prenom">Prénom*</label><input type="text" name="firstname" placeholder="Indiquez votre prénom" required></div>
+                <div class="champs"><label for="mailadresses">E-mail*</label><input type='email' name="usermail" placeholder="Indiquez votre e-mail" required></div>
+                <div class="champs"><label for="avis">Votre avis*</label><textarea maxlength="600" name="message" placeholder="Indiquez votre avis" required></textarea></div>
+                <div class="envoi"><p>(*Champs obligatoires)</p></div>
+                <div class="envoi"><input id="bouton" type="button" value="Envoyer"></div>
+                   
+            </form>
+        </section>
+    </div>
 </body>
+</html>
