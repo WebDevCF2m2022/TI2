@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 
 #header{
     max-width: 1100px;
@@ -11,6 +13,7 @@
     justify-content: space-between;
     border-radius: 15px;
     box-shadow: 0px 10px 50px -10px grey;
+    box-sizing: border-box;
 
 }
 
@@ -21,7 +24,7 @@
 }
 
 #monFormulaire input{
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 h2{
@@ -36,6 +39,124 @@ h1{
     margin-bottom: -10px;
 }
 
-@media screen and (min-width: 800px){
-    
+#message{
+    align-items: center;
 }
+
+.container{
+    background-color: #56add5;
+    width: 100%;
+    padding: 35px;
+}
+
+
+
+label{
+    display: flex;
+}
+
+#captchaValidate{
+    position: relative;
+  
+    top: 10px;
+    width: 92%;
+}
+
+p{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.text{
+    border: 2px solid black;
+        border-radius: 10px;
+        margin-bottom: 10px;
+}
+
+.p1{
+    padding: 15px;
+}
+
+/*------------------captcha-------------*/
+#captchaRefresh{
+    position: relative;
+    left: 3em;
+    top: -40px;
+}
+
+#captchaInput{
+    position: relative;
+    left: 3em;
+    width: 150px;
+    top: -30px;
+}
+
+h4{
+    text-align: center;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #56add5;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+

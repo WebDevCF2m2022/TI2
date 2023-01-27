@@ -21,68 +21,92 @@
         <h1>Livre d'or</h1>
         <img src="../public/img/email.png" alt="">
 
-        <div class="formulaire">
+        <div class="container">
             <?php
             # si on a un message
             if (isset($message)) :
                 # on l'affiche
             ?>
-                <h4><?= $message ?></h4>
+
             <?php
             endif;
             ?>
-            <form id='monFormulaire' name='lemail' action='' method="POST">
-                <div id="from">
-                    <label for="firstname">Prénom:</label>
-                    <input type="text" id="name" name="firstname" required>
+            <form id="monFormulaire" action="" method="POST">
+                <h4><?= $message ?></h4>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="firstname">Prénom :</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="votre prénom..">
+                    </div>
                 </div>
 
-                <div id="reply">
-                    <label for="nom">Nom:</label>
-                    <input type="text" id="nom" name="lastname">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lastname">Nom :</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="votre nom..">
+                    </div>
                 </div>
 
-                <div id="reply">
-                    <label for="email"> mail:</label>
-                    <input type="email" id="mail" name="usermail" required>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="usermail">mail :</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="usermail" placeholder="entrer votre email">
+                    </div>
                 </div>
 
-                <div id="message">
-                    <label for="msg">Votre message:</label>
-                    <textarea id="msg" name="message" cols="60" rows="5" maxlength="600" required></textarea>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="message">message :</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="message" placeholder="entrer votre message ici.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <p>(*) Ce champ est obligatoire</p>
+                <div class="row">
+                    <input type="submit" value="Submit">
                 </div>
 
-                <div class="button">
-                    <button id="captchaValidate" type="button">Valider</button>
-                </div>
-            </form>
-
-            <p>(*) ce champ est obligatoire</p>
+        </div>
+        </form>
         </div>
 
-        <div>
-            <p id="captcha"></p></br></br>
-            <input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span></br></br>
+        <p id="captcha"></p></br></br>
+        <button id="captchaRefresh" type="button">Refresh</button>
+        <input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span></br></br>
+        </form>
+        </div>
 
-            <button id="captchaRefresh" type="button">Refresh</button>
         </div>
         <h3>Les mails</h3>
         <?php
         # pas de mail
         if (empty($nbMail)) :
         ?>
-            <h4></h4>
+
         <?php
         # on a au moins un mail
         else :
             # affichage du nombre de mail
         ?>
-            <h4>Nous avons <?= $nbMail ?> adresses inscrites</h4>
+            <h4>Nous avons <?= $nbMail ?> messages inscrites</h4>
             <?php
             # tant qu'on a des mail
             foreach ($responseMail as $item) :
             ?>
-                <div class='theMail'><?= $item['firstname'] ?> <?= $item['usermail'] ?><?= $item['message'] ?></div>
+                <div class="text">
+                    <h4><?= $item['firstname'] ?> à envoyé le message le <?= $item['datemessage'] ?></h4>
+                    <p><?= $item['message'] ?></p>
+                </div>
+
+
         <?php
             endforeach;
         endif;

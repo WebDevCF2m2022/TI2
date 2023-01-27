@@ -64,7 +64,7 @@ if (isset($_POST['firstname'], $_POST['usermail'], $_POST['message'])) {
 # chargement de tous les mails
 
 // requête en variable texte contenant du MySQL
-$sqlMail = "SELECT `firstname`, `usermail`, `message` FROM `livreor` ORDER BY `datemessage` DESC; ";
+$sqlMail = "SELECT `firstname`, `usermail`, `message`,`datemessage` FROM `livreor` ORDER BY `datemessage` DESC; ";
 
 // exécution de la requête avec un try / catch
 try {
