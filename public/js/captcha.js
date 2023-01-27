@@ -1,5 +1,4 @@
 function capTI(callback, min = 6, max = 6) {
-
 	
 	function randomInt(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min);
@@ -22,21 +21,42 @@ function capTI(callback, min = 6, max = 6) {
 		for (let i = 0; i < capcap.length; i++) {
 			let colorsRandom = randRGB();
 
-			let size = randSize(10, 15);
+			let size = randSize(20, 30);
 
 			capOut.insertAdjacentHTML(
 				"beforeend",
-				`<span style="color:rgb(${colorsRandom[0]},${colorsRandom[1]},${colorsRandom[2]});font-size:${size}em;">${capcap[i]}</span>`
+				`<span style="color:rgb(${colorsRandom[0]},${colorsRandom[1]},${colorsRandom[2]});font-size:${size}rem;">${capcap[i]}</span>`
 			);
 		}
 	}
 
+	
 	function validateCaptcha() {
 		if (capOut.textContent == capIn.value) {
-			callback();
+			if(error.className == "invalid"){
+				capIn.style.border = "3px solid green"
+				error.classList.remove("invalid");
+				confirm.classList.add("valid");
+				setTimeout (callback, 3000);
+			}else{
+				capIn.style.border = "3px solid green"
+				confirm.classList.add("valid");
+				setTimeout (callback, 3000);
+			}
 		} else {
 			generateCaptcha();
-			error.classList.add("invalide");
+			capIn.style.border = "3px solid red"
+			error.classList.add("invalid");
+		}
+	}
+	
+	function refreshCaptcha(){
+		if(error.className == "invalid"){
+			error.classList.remove("invalid");
+			capIn.style.border = "1px solid black"
+			generateCaptcha()
+		}else{	
+			generateCaptcha();
 		}
 	}
 
@@ -54,21 +74,25 @@ function capTI(callback, min = 6, max = 6) {
 		return randomInt(randMin, randMax) / 10;
 	}
 
-	const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
+	const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","D","E","F","G","H","I","J","K","L","M","N","P","Q","R","S","T","U","W","Y","1","2","3","4","5","6","7","8","9"]
 
 	let capOut = document.querySelector("#captchaOutput");
 	let capIn = document.querySelector("#captchaInput");
 	let capValid = document.querySelector("#captchaValidate");
 	let refresh = document.querySelector("#refresh");
 	let error = document.querySelector('#error')
+	let confirm = document.querySelector('#confirm')
+	
+
 
 	generateCaptcha();
 	capValid.addEventListener("click", validateCaptcha);
-	refresh.addEventListener("click", generateCaptcha);
+	refresh.addEventListener("click", refreshCaptcha);
+
 }
 
-function redirect() {
+function soumission() {
 	document.querySelector('form').requestSubmit(); 
 }
 
-capTI(redirect, 8, 8);
+capTI(soumission, 7, 7);

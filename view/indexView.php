@@ -19,8 +19,8 @@
 
     <!-- formulaire -->
     <form action="" method="post">
-    <div class="form-container">
-        <?php
+        <div class="form-container">
+            <?php
             if (isset($messageRetour)) : ?>
                 <p><?= $messageRetour ?></p>
             <?php
@@ -31,7 +31,7 @@
             <label for="lastname">Nom</label><input type="text" name="lastname" id="lastname">
             <label for="usermail">E-mail *</label><input type="email" name="usermail" id="usermail">
             <label for="message">Message *</label><textarea name="message" id="message"></textarea>
-            
+
             <!-- mettre en type="button" hein -->
             <button id="captchaValidate" type="button">Envoyer</button>
         </div>
@@ -40,7 +40,12 @@
             <p id="captchaOutput"></p>
             <button id="refresh" type="button">Rafraichir</button><br>
             <input id="captchaInput" placeholder="faites le captcha" type="text" />
-            <span id="error"><p>ERREUR</p></span>
+            <span id="confirm">
+                <p>Votre message est envoyé!</p>
+            </span>
+            <span id="error">
+                <p>Captach invalide!!</p>
+            </span>
         </div>
 
     </form>
@@ -54,7 +59,7 @@
             <?= "il y a pas de messages ici"; ?>
             <?php else :
 
-                foreach ($resultLO as $item) : ?>
+            foreach ($resultLO as $item) : ?>
                 <div class="messages">
                     <h4><?= $item['firstname'] . " " . $item['lastname'] . " a envoyé ce message le " . $item['datemessage']; ?></h4>
                     <p><?= "Message : " . $item['message']; ?></p>
