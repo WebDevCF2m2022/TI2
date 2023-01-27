@@ -1,0 +1,21 @@
+#captcha {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none;
+
+	background-color: rgb(17, 9, 9);
+	display: inline;
+	padding: 0.8em;
+	border-radius: 1px;
+}
+
+.invalidCaptcha + span::after{
+	content: " Captcha invalide";
+	color: red;
+}
+
+
+.validCaptcha + span::after{
+	content: " Captcha valide";
+	color: green;
+}
