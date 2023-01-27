@@ -13,9 +13,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/captcha.css">
-        <!--<script src="js/captcha.js"></script>-->
+        <script src="js/captcha.js" defer></script>
 </head>
-<body>
+<body onload="captchaHome(redirection,7)">
     <h1>Laissez-nous un message</h1>
     <div class="agencement">
         <img id="satisfaction" src="img/Satisfaction.jpg" alt="Donnez votre avis">
@@ -30,6 +30,11 @@
             </form>
         </section>
     </div>
+    <div class="card">
+		<p id="captcha"></p>
+		<input type="text" id="captchaInput" placeholder="Tapez le captcha"><br>
+		<button id="captchaValidate">Valider</button> 	<button id="captchaRefresh">Refresh</button>
+	</div>
 
     
 </body>

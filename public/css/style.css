@@ -38,8 +38,8 @@ form{
     max-width: 120ch;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: bisque;
-    padding: 2em;
+    background-color: rgb(181, 247, 247);
+    padding: 3em;
 }
 .champs{
     display: flex;
