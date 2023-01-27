@@ -1,7 +1,6 @@
 <?php
-//*var_dump($responseLog)
+//*var_dump($_POST)
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
     <script src="js/captcha.js" defer></script>
 </head>
 <body>
-    <h1>Test</h1>
+    <h1>Livre d'Or</h1>
 
     <?php
     # si on a un message, si on a un message 
@@ -27,22 +26,26 @@
     ?>
 
 <div class="formulaire">
-    <img src="img/email.png" alt="">
-    <form name='formBook' action='' method="POST">
-      
-            <input type="text" name="prenomLog" placeholder="Prenom" ><br>
-            <input type='text' name="nomLog" placeholder="Nom" required><br>
-            <input type='email' name="mailLog" placeholder="Mail" required><br>
-            <input type='text' name="messageLog" placeholder="Message" required><br>
-            <input type="button " value="Envoyer">
-    </form>
-</div>
-        <div>
+    <img src="img/logoyoussef.jpg" alt="">
+    <form id="logFormulaire" name='formBook' action='' method="POST">
+            <div class="formInt">
+                <h3>Laissez-nous un message</h3>
+                 <label for="prenomLog">Prenom *</label>  <input class="inputForm" type="text" name="prenomLog" placeholder="Prenom" required> <br>
+                 <label for="nomLog">Nom  </label> <input class="inputForm" type='text' name="nomLog" placeholder="Nom" ><br>
+                 <label for="mailLog">Mail *</label> <input class="inputForm" type='email' name="mailLog" placeholder="Mail" required><br>
+                 <label class="labelMessage" for="messageLog"> Message *</label> <input class="inputFormMessage" type='text' name="messageLog" placeholder="" required><br>
+                 <p class="champObligatoire" >(*) Ce champ est obligatoire</p>
+                 <input class="boutonEnvoie" type="button" value="Envoyer">
+            </div>
+
+            <div class="capBody">
 			<p id="captcha"></p><br>
 			<input id="captchaInput" type="text" placeholder="Entrez le captcha"><span></span></br></br>
-			<button id="captchaValidate" type="button">Valider</button>
-			<button id="captchaRefresh" type="button">Refresh</button>
+		    <button id="captchaRefresh" type="button">Refresh</button>
 		</div>
+    </form>
+</div>
+<div class="messageEnvoyer">
         <?php
     # pas de mail
     if(empty($nbLog)):
@@ -53,18 +56,17 @@
     else:
         # affichage du nombre de mail
         ?>
-    <h4>Nous avons <?=$nbLog?> adresses inscrites</h4>
+    <h4>Nous avons <?=$nbLog?> avis </h4>
         <?php
         foreach($responseLog as $item):
         ?>
         <div class='affichageLog'>
-            <?=$item['firstname']?> 
-            <?=$item['lastname']?> 
-            <?=$item['usermail']?> 
-            <?=$item['datemessage']?>
-            <br>
-            <?=$item['message']?> <br>
+            <p><?=$item['firstname']?> <?=$item['lastname']?> a envoyer ce message le <?=$item['datemessage']?> 
+            <br><br>
+            <?=$item['message']?> <br></p>
         </div>
+</div>
+
         <?php
         endforeach;
         endif;
