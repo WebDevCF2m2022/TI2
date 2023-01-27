@@ -44,7 +44,7 @@ var_dump($msg);
                try{
                   #requête
                 mysqli_query($db,$sqlInsertMail); 
-                 $message ="Merci pour votre message envoyer"; 
+                 $message ='<span style="color:red;">Merci pour votre message envoyer </span>'; 
                  header("Location: ./");  // il enregiste plus apres dans base de donne :)) c'est un probleme que le je fait 11 fois :)
                  ?>
                  <h2><?=$message?></h2>
@@ -57,14 +57,14 @@ var_dump($msg);
                #avec les code sql on peut faire des erreur differents
                    if($e->getCode()==1406){
                    # creation du l'erreur
-                    $message="vous email c'est tres long  ";
+                    $message='<span style="color:red;">vous email c est tres long </span>';
                     ?>
                     <h2><?=$message?></h2>
                   <?php
                   //si il c'est un autre alors on a parte 
                   }elseif($e->getCode()){
                      #creatipon du l'erreur
-                     $message="vous etes deja inscrite avec cette email";
+                     $message='<span style="color:red;">vous etes deja inscrite avec cette email</span>';
                      ?>
                      <h2><?=$message?></h2>
                    <?php
@@ -76,7 +76,8 @@ var_dump($msg);
      #sinon erreur
          }else{
             #creation de variable $message
-            $message="IL y a un probleme dans votre inscription svp reessailler "; 
+            $message='<span style="color:red;"> IL y a un probleme dans votre inscription svp reessailler</span>'; 
+
          }
         }
 

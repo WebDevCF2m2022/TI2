@@ -84,13 +84,14 @@ var_dump($_POST)
                 <div class="input-div">
                     <div>
                         <h5>Message *</h5>
-                        <input type="text" name="message" class="logmsg" require>
+                        <input type="textarea" maxlength="600" name="message" class="logmsg" require>
                     </div>
                 </div>
              
                 <h6 class=oblig>(*) Ce champ est obligatoire </h6>
-                <input type="submit" class="btn" value="login" id="">
+                
                 <div class=bordcaptcha>
+                <input type="button" class="btn" value="Envoyer" id="captchaValidate">
                     <p id="captcha"></p></br></br>
                     
                     <input id="captchaRefresh" type="button" value="Refresh"><br>
