@@ -25,7 +25,7 @@
 
                 <div class="oui">
                     <label for="firstname">Prénom *</label>
-                    <input type="text" name="firstname" id="firstname">
+                    <input type="text" name="firstname" id="firstname" required>
                 </div>
 
                 <div class="oui">
@@ -35,14 +35,26 @@
 
                 <div class="oui">
                     <label for="usermail">E-mail *</label>
-                    <input type="email" name="usermail" id="usermail">
+                    <input type="email" name="usermail" id="usermail" required>
                 </div>
 
                 <div class="oui">
                     <label for="message">Message *</label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" id="message" required></textarea>
                 </div>
 
+                <!-- le captcha il va là -->
+                <div class="cap">
+                    <p id="captchaOutput"></p>
+                    <button id="refresh" type="button">Rafraichir</button><br>
+                    <input id="captchaInput" placeholder="faites le captcha" type="text" required />
+                    <span id="confirm">
+                        <p>Le captcha est valide!</p>
+                    </span>
+                    <span id="error">
+                        <p>Captach invalide!!</p>
+                    </span>
+                </div>
                 <!-- mettre en type="button" hein -->
                 <button id="captchaValidate" type="button">Envoyer</button>
 
@@ -54,18 +66,6 @@
                 ?>
 
             </div>
-    </div>
-    <!-- le captcha il va là -->
-    <div class="cap">
-        <p id="captchaOutput"></p>
-        <button id="refresh" type="button">Rafraichir</button><br>
-        <input id="captchaInput" placeholder="faites le captcha" type="text" />
-        <span id="confirm">
-            <p>Le captcha est valide!</p>
-        </span>
-        <span id="error">
-            <p>Captach invalide!!</p>
-        </span>
     </div>
     </form>
 
